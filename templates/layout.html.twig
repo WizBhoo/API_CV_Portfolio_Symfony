@@ -34,71 +34,9 @@
 
 <body>
 <!--================ Start Header Menu Area =================-->
-<header class="header_area">
-    <div class="main_menu">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand" href="{{ path('home') }}"><img src="{{ asset('img/logo.png') }}" alt="APi"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav menu_nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('home') }}">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ asset('download/CV_PIERRARD_ADRIEN.pdf') }}" target="_blank">CV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Réalisations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Contact</a>
-                        </li>
-                        {% if is_granted('ROLE_ADMIN') %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    Accès Admin
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    Déconnexion
-                                </a>
-                            </li>
-                        {% elseif is_granted('ROLE_USER') %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    Mon Compte
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    Déconnexion
-                                </a>
-                            </li>
-                        {% else %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    Se Connecter
-                                </a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
+
+{% include('block/header.html.twig') %}
+
 <!--================End Header Menu Area =================-->
 
 
@@ -106,50 +44,9 @@
 
 
 <!--================ Start Footer Area =================-->
-<footer class="footer_area section_gap">
-    <div class="container">
-        <div class="row footer_inner justify-content-center">
-            <div class="col-lg-6 text-center">
-                <aside class="f_widget social_widget">
-                    <div class="f_logo">
-                        <img src="{{ asset('img/logo.png') }}" alt="APi">
-                    </div>
-                    <div class="f_title">
-                        <h4>Follow Me</h4>
-                    </div>
-                    <ul class="list">
-                        <li>
-                            <a href="https://www.linkedin.com/in/a-pierrard/" target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/WizBhoo" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/WizBhoo" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </aside>
-                <div class="copyright">
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                        All rights reserved | This template is made with
-                        <i class="fa fa-heart-o" aria-hidden="true"></i> by
-                        <a href="https://colorlib.com" target="_blank">Colorlib</a><br>
-                        Adapted for personnal use by
-                        <a href="https://github.com/WizBhoo" target="_blank">WizBhoo</a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+
+{% include('block/footer.html.twig') %}
+
 <!--================ End Footer Area =================-->
 
 <!-- Optional JavaScript -->
