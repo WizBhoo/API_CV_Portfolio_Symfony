@@ -3,10 +3,11 @@
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
                 <div class="main-title">
-                    <h1>Mes Réalisations</h1>
-                    <p>Réalisés dans le cadre de ma reconversion ou à des fins personnelles,
-                        je vous invite ici à parcourir les projets que j'ai réalisés pour
-                        illustrer mes compétences.
+                    <h1>{% trans %}My Portfolio{% endtrans %}</h1>
+                    <p>
+                        {% trans %}
+                            Developed as part of my conversion training or for personal purposes, I invite you to browse the projects conducted to illustrate my skills.
+                        {% endtrans %}
                     </p>
                 </div>
             </div>
@@ -15,12 +16,12 @@
             <div class="col-lg-10">
                 <div class="projects_fillter">
                     <ul class="filter list">
-                        <li class="active" data-filter="*">Toutes Categories</li>
+                        <li class="active" data-filter="*">{% trans %}All Categories{% endtrans %}</li>
                         <li data-filter=".cms">CMS</li>
                         <li data-filter=".html-css">HTML/CSS</li>
                         <li data-filter=".php">PHP</li>
                         <li data-filter=".symfony">Symfony</li>
-                        <li data-filter=".other">Autres</li>
+                        <li data-filter=".other">{% trans %}Others{% endtrans %}</li>
                     </ul>
                 </div>
             </div>

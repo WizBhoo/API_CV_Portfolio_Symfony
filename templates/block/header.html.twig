@@ -14,13 +14,13 @@
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('home') }}">Accueil</a>
+                            <a class="nav-link" href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ asset('download/CV_PIERRARD_ADRIEN.pdf') }}" target="_blank">CV</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Réalisations</a>
+                            <a class="nav-link" href="">{% trans %}Portfolio{% endtrans %}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Blog</a>
@@ -31,29 +31,29 @@
                         {% if is_granted('ROLE_ADMIN') %}
                             <li class="nav-item">
                                 <a class="nav-link" href="">
-                                    Accès Admin
+                                    {% trans %}Admin Access{% endtrans %}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="">
-                                    Déconnexion
+                                    {% trans %}Logout{% endtrans %}
                                 </a>
                             </li>
                         {% elseif is_granted('ROLE_USER') %}
                             <li class="nav-item">
                                 <a class="nav-link" href="">
-                                    Mon Compte
+                                    {% trans %}My Account{% endtrans %}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="">
-                                    Déconnexion
+                                    {% trans %}Logout{% endtrans %}
                                 </a>
                             </li>
                         {% else %}
                             <li class="nav-item">
                                 <a class="nav-link" href="">
-                                    Se Connecter
+                                    {% trans %}Login{% endtrans %}
                                 </a>
                             </li>
                         {% endif %}
