@@ -29,23 +29,88 @@
   "Réalisés dans le cadre de ma reconversion ou à des fins personnelles, je vous invite ici à parcourir les projets que j'ai réalisés pour illustrer mes compétences."
 'All Categories': 'Toutes Catégories'
 'Others': 'Autres'
-# Trans projects pages
+# Common trans projects pages
 'Project': 'Projet'
 'Period': 'Réalisation'
 'Category': 'Catégorie'
 'Skills': 'Compétences'
+'Methodology': 'Méthodologie'
+'See': 'Voir'
 'See website': 'Voir site'
 'See evaluation': 'Voir évaluation'
+'See UML': 'Voir UML'
 'Project expectations': 'Attentes du projet'
+'Constraints': 'Contraintes'
+'Context': 'Contexte'
+'Technical documentation': 'Documentation technique'
 'OCR training project': 'Projet de formation OCR'
+'Working environment': 'Environnement de travail'
+'UML software analysis': 'Analyse logiciel UML'
+'February': 'Février'
+'March': 'Mars'
+'April': 'Avril'
+'May': 'Mai'
+'June': 'Juin'
+'July': 'Juillet'
 'December': 'Décembre'
 'Customer Manual': 'Notice Client'
-"This project takes part of my training course to become a PHP / Symfony Web Application Developer.": "Ce projet s'est inscrit dans le cadre de mon parcours de formation pour devenir Développeur d'Application Web PHP / Symfony."
+'Specifications': 'Cahier Des Charges'
+'Quality &amp; Performance Audit': 'Audit Qualité &amp; Performance'
+'This project takes part of my training course to become a PHP / Symfony Web Application Developer.':
+  "Ce projet s'est inscrit dans le cadre de mon parcours de formation pour devenir Développeur d'Application Web PHP / Symfony."
+'This project takes part of my personal working environment implementation.':
+  "Ce projet s'est inscrit dans le cadre de la mise en place de mon environnement de travail personnel."
+# Specific trans p1
 "The goal was to integrate a Wordpress theme for a client.": "L'objectif était d'intégrer un thème Wordpress pour un client."
-'The real estate agency "Chalets et Caviar" in Courchevel has around 15 luxury chalets for sale and around 20 for rent. However, it does not yet have a website to promote the sale and rental of its chalets.': "L’agence immobilière \"Chalets et Caviar\" de Courchevel possède une quinzaine de chalets de luxe à la vente et une vingtaine en location. Cependant, elle ne possède pas encore de site web pour promouvoir la vente et la location de ses chalets."
-'During a first meeting, the director of the agency expresses the following expectations:': "Lors d’une première réunion, la directrice de l’agence exprime les attentes suivantes :"
+'The real estate agency "Chalets et Caviar" in Courchevel has around 15 luxury chalets for sale and around 20 for rent. However, it does not yet have a website to promote the sale and rental of its chalets.':
+  "L’agence immobilière \"Chalets et Caviar\" de Courchevel possède une quinzaine de chalets de luxe à la vente et une vingtaine en location. Cependant, elle ne possède pas encore de site web pour promouvoir la vente et la location de ses chalets."
+'During a first meeting, the director of the agency expresses the following expectations:':
+  "Lors d’une première réunion, la directrice de l’agence exprime les attentes suivantes :"
 'A manageable WordPress website.': 'Un site web WordPress administrable par ses soins.'
 "A clear and refined design highlighting the agency's luxury line.": "Un design clair et épuré mettant en avant la ligne de luxe de l'agence."
 'Separate categories for the chalets presentation for sale and for rent.': "Des catégories distinctes pour la présentation des chalets à vendre et à louer."
-'A page that contains the agency contact details with a functional contact form.': "Une page contenant les coordonnées de l'agence avec un formulaire de contact fonctionnel."
-'1 Administrator Account (full access) and 2 Editors (restricted access to the chalets C.R.U.D system).': "1 Compte Administrateur (plein accès) et 2 Editeurs (accès restrincts au C.R.U.D des chalets)."
+'A page that contains the agency contact details with a functional contact form.':
+  "Une page contenant les coordonnées de l'agence avec un formulaire de contact fonctionnel."
+'1 Administrator Account (full access) and 2 Editors (restricted access to the chalets C.R.U.D system).':
+  "1 Compte Administrateur (plein accès) et 2 Editeurs (accès restrincts au C.R.U.D des chalets)."
+# Specific trans p2
+'The goal was to analyze the customer needs for its film festival by writing detailed specifications. It was also necessary to realize the website prototype.':
+  "L'objectif était d'analyser les besoins client pour son festival de films en établissant le cahier des charges contenant les spécifications détaillées. Il fallait également réaliser le prototype du site."
+'The Outdoor Film Festival organizer aims to select and screen author films from August 5 to 8, from 6 p.m. to midnight, at Parc Monceau in Paris. Her association has just been created and she has a limited budget. She needs :':
+  "L'organisatrice du festival des Films de Plein Air ambitionne de sélectionner et de projeter des films d'auteur du 5 au 8 août, de 18 heures à minuit, au parc Monceau à Paris. Son association vient juste d'être créée et elle dispose d'un budget limité. Elle a besoin :"
+'A graphic charter': "D'une charte graphique"
+'To communicate online about the festival (presentation and news)': 'De communiquer en ligne sur son festival (présentation et actualités)'
+'To announce the films program': "D'annoncer la programmation des films projetés"
+'To collect reservations via a pre-registration system.': 'De recueillir les réservations via un système de pré-inscription.'
+'She asks us to list the corresponding technical features and to propose a suitable technical solution. By selecting the solution most able to meet their expectations, she should see a first version of the site (prototype).':
+  "Elle nous demande de lister les fonctionnalités techniques correspondantes et de proposer une solution technique adaptée. En sélectionnant la solution la plus à même de répondre à ses attentes, elle doit voir une première version du site (prototype)."
+# Specific trans p3
+'The goal was to design the technical solution for an online catering application.':
+  "L'objectif était de concevoir la solution technique d'une application de restauration en ligne."
+'The very young startup ExpressFood aims to deliver quality food at home in less than 20 minutes thanks to a network of bicycle delivery people. Every day, ExpressFood prepares 2 dishes and 2 desserts at its HQ in collaboration with experienced chefs. These dishes are cold packaged and then sent to home delivery people who then "maraud" the streets while awaiting delivery.':
+  "La toute jeune startup ExpressFood ambitionne de livrer des plats de qualité à domicile en moins de 20 minutes grâce à un réseau de livreurs à vélo. Chaque jour, ExpressFood prépare 2 plats et 2 desserts à son QG en collaboration avec des chefs expérimentés. Ces plats sont conditionnés à froid puis transmis à des livreurs à domicile qui \"maraudent\" ensuite dans les rues en attendant une livraison."
+'As soon as a customer has ordered, one of the delivery people (who already has the dishes in a bag) is assigned to deliver in less than 20 minutes. On its application, ExpressFood offers its customers to order one or more dishes and desserts. Shipping costs are free. The dishes change every day. Once the order has been placed, the customer has access to a page indicating whether a delivery person has taken his order and the estimated time before delivery.':
+  "Dès qu'un client a commandé, l'un des livreurs (qui possède déjà les plats dans un sac) est missionné pour livrer en moins de 20 minutes. Sur son application, ExpressFood propose à ses clients de commander un ou plusieurs plats et desserts. Les frais de livraison sont gratuits. Les plats changent chaque jour. Une fois la commande passée, le client a accès à une page lui indiquant si un livreur a pris sa commande et le temps estimé avant livraison."
+'Thanks to UML, ExpressFood needs you to design its database. This involves storing in particular the list of customers, the different daily specials, delivery people with their status and position, orders placed, etc...':
+  "Grâce au langage UML, ExpressFood a besoin que vous conceviez sa base de données. Il s'agit d'y stocker notamment la liste des clients, des différents plats du jour, des livreurs avec leur statut et leur position, des commandes passées, etc..."
+'Deliverables requested are': 'Les livrables demandés sont'
+'Use case and sequence diagrams (order creation, adding dish of the day, order delivery)':
+  "Les diagrammes de cas d’utilisation et de séquences (création commande, ajout plat du jour, livraison commande)"
+'Classes diagram': 'Le diagramme de classes'
+'The Physical Data Model - PDM': 'Le Modèle Physique de Données - MPD'
+'The MySQL database containing a data demo set': 'La Base De Données MySQL contenant un jeu de données de démo'
+# Specific trans p4
+'The goal was to develop the SnowTricks community website from A to Z using the Symfony Framework.':
+  "L'objectif était de développer de A à Z le site communautaire SnowTricks à l'aide du Framework Symfony."
+# Specific trans p5
+'Create my first PHP website': 'Créer mon premier site en PHP'
+'The goal was to create my first PHP website containing a blog.': "L'objectif était de créer mon premier site en PHP intégrant un blog."
+# Specific trans p6
+'The goal was to improve an existing application of ToDo &amp; Co.': "L'objectif était d'améliorer une application existante de ToDo &amp; Co."
+# Specific trans p7
+'The goal was for me to obtain additional skills as quickly as possible allowing me to develop locally on my computer in flexible and comfortable conditions without remaining dependent on it.':
+  "L'objectif était pour moi d'acquérir le plus rapidement possible des compétences annexes me permettant de développer en local sur mon ordinateur dans des conditions flexibles et confortables sans rester dépendant de ce dernier."
+'So I decided to learn how to use Docker to create stacks suited to my needs. This work was done with the help of my "Jedi Master"':
+  "J'ai donc décidé d'apprendre à utiliser Docker pour créer des stacks adaptées à mes besoins. Ce travail a été réalisé avec l'aide de mon \"Maître Jedi\""
+# Specific trans p8
+'The goal was to create a web service exposing an API.': "L'objectif était de créer un service web exposant une API."
