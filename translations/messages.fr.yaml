@@ -1,0 +1,31 @@
+# Trans navbar
+'Homepage': 'Accueil'
+'Portfolio': 'Réalisations'
+'Login': 'Se Connecter'
+'Logout': 'Se Déconnecter'
+'Admin Access': 'Accès Admin'
+'My Account': 'Mon Compte'
+# Trans main title
+"PHP / Symfony Web Application Developer": "Développeur d'Application Web PHP / Symfony"
+'See CV': 'Voir CV'
+# Trans About Me section
+'About Me': 'À propos de moi'
+"After ten years accomplished in the health industries as a Quality and Regulations Management Engineer, I made the choice to question my professional career to bring more concrete achievements to my daily life of work.":
+  "Fort de dix années accomplies au sein des industries de santé en tant qu'Ingénieur en Management par la Qualité et Réglementations, j'ai fait le choix de remettre en question mon parcours professionnel pour apporter plus de réalisations concrètes à mon quotidien de travail."
+"Computer lover with easy to understand programming languages, it was obvious for me to stretch my career towards applications development and more particularly related to the Web.":
+  "Passionné d'informatique et faisant preuve d'aisance dans l'appréhension des langages de programmation, ce fut donc une évidence pour moi de faire tendre ma carrière vers le développement d'applications et plus particulièrement liées au Web."
+"Self-taught, I therefore undertook a complete independent training course to become a PHP / Symfony Web Application Developer. This CV site, developed as part of my training, is the ideal opportunity to concretely present my skills. <br> Visit my blog to find out more about my background and for more information, don't hesitate to":
+  "Autodidacte, j'ai donc entrepris une formation complète en autonomie pour devenir Développeur d'Application Web PHP / Symfony. Ce site CV, réalisé dans le cadre de ma formation, est l'opportunité idéale pour vous présenter concrètement mes compétences acquises.<br> Visitez mon blog pour en savoir plus sur mon parcours et pour plus de renseignements, n'hésitez pas à"
+'contact me': 'me contacter'
+'Visit my Blog': 'Visitez mon Blog'
+# Trans testimonials section
+"For having encouraged Adrien to start his professional conversion and have supported him throughout it, I can tell you that Adrien is a motivated person! He was able to quickly grasp many concepts while respecting his code and projects. His ambition is to continue this daily learning to improve himself as a developer.":
+  "Pour avoir encouragé Adrien à se lancer dans sa reconversion professionnelle et l'avoir accompagné tout au long de celle-ci, je peux vous dire qu'Adrien est une personne motivée ! Il a su appréhender rapidement beaucoup de notions tout en respectant son code et ses projets. Son ambition est de poursuivre cet apprentissage au quotidien pour s'améliorer en tant que développeur."
+"It was a pleasure to follow Adrien during his training because he is a curious, rigorous and autonomous person. In addition, it has the main quality that every developer must have: persistence. I was also impressed by his ability to adapt to languages, technologies and a profession that were completely unknown to him a few months ago. If there was a vacancy in my company for a junior backend / symfony I would highly recommend Adrien's profile.":
+  "Ça a été un plaisir de suivre Adrien pendant sa formation car c'est quelqu'un de curieux, rigoureux et autonome. De plus, il possède la principale qualité que tout développeur doit avoir : la persévérance. J'ai aussi été impressionné par sa capacité d'adaptation à des langages, technologies et à un métier qui lui étaient complètement inconnus il y a quelques mois encore. S'il y avait un poste à pourvoir dans ma société pour un junior backend/symfony je recommanderais fortement le profil d'Adrien."
+# Trans block project_gallery
+'My Portfolio': 'Mes Réalisations'
+"Developed as part of my conversion training or for personal purposes, I invite you to browse the projects conducted to illustrate my skills.":
+  "Réalisés dans le cadre de ma reconversion ou à des fins personnelles, je vous invite ici à parcourir les projets que j'ai réalisés pour illustrer mes compétences."
+'All Categories': 'Toutes Catégories'
+'Others': 'Autres'

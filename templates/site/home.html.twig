@@ -1,0 +1,155 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    <!--================Home Banner Area =================-->
+    {% for messages in app.flashes(['success', 'notice', 'error']) %}
+        {% for message in messages %}
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <div class="alert-success">
+                        {{ message|trans(messages, 'messages') }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    <section class="banner-area owl-carousel" id="home">
+        <div class="single_slide_banner slide_bg1">
+            <div class="container">
+                <div class="row fullscreen d-flex align-items-center">
+                    <div class="banner-content col-lg-12 justify-content-center">
+                        <h1>Adrien PIERRARD</h1>
+                        <h3>{% trans %}PHP / Symfony Web Application Developer{% endtrans %}</h3>
+                        <a href="{{ asset('download/CV_PIERRARD_ADRIEN.pdf') }}" class="primary-btn" target="_blank">
+                            {% trans %}See CV{% endtrans %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================ Start Portfolio Area =================-->
+
+    {% include('block/project_gallery.html.twig') %}
+
+    <!--================ End Portfolio Area =================-->
+
+    <!--================ Start About Area =================-->
+    <section class="about-area section_gap gray-bg">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-5 about-left">
+                    <img class="img-fluid" src="{{ asset('img/about-img.png') }}" alt="About Me">
+                </div>
+                <div class="col-lg-6 col-md-12 about-right">
+                    <div class="main-title text-left">
+                        <h1>{% trans %}About Me{% endtrans %}</h1>
+                    </div>
+                    <div class="mb-50 wow fadeIn" id="about-me" data-wow-duration=".8s">
+                        <p>
+                            {% trans %}
+                                After ten years accomplished in the health industries as a Quality and Regulations Management Engineer, I made the choice to question my professional career to bring more concrete achievements to my daily life of work.
+                            {% endtrans %}
+                        </p>
+                        <p>
+                            {% trans %}
+                                Computer lover with easy to understand programming languages, it was obvious for me to stretch my career towards applications development and more particularly related to the Web.
+                            {% endtrans %}
+                        </p>
+                        <p>
+                            {% trans %}
+                                Self-taught, I therefore undertook a complete independent training course to become a PHP / Symfony Web Application Developer. This CV site, developed as part of my training, is the ideal opportunity to concretely present my skills. <br> Visit my blog to find out more about my background and for more information, don't hesitate to
+                            {% endtrans %}
+                            <a href="">{% trans %}contact me{% endtrans %}</a>.
+                        </p>
+                    </div>
+                    <a href="" class="primary-btn">{% trans %}Visit my Blog{% endtrans %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End About Area =================-->
+
+    <!--================ Start Testimonial Area =================-->
+    <div class="section_gap testimonial_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-left">
+                    <div class="active_testimonial owl-carousel" data-slider-id="1">
+                        <!-- single testimonial -->
+                        <div class="single_testimonial">
+                            <div class="testimonial_head">
+                                <img src="{{ asset('img/quote.png') }}" alt="quote">
+                                <h4>Yann LUCAS</h4>
+                                <h3>Lead Developer – IAD International</h3>
+                                <div class="review">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial_content">
+                                <p>
+                                    {% trans %}
+                                        For having encouraged Adrien to start his professional conversion and have supported him throughout it, I can tell you that Adrien is a motivated person! He was able to quickly grasp many concepts while respecting his code and projects. His ambition is to continue this daily learning to improve himself as a developer.
+                                    {% endtrans %}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="single_testimonial">
+                            <div class="testimonial_head">
+                                <img src="{{ asset('img/quote.png') }}" alt="quote">
+                                <h4>Rui TEIXEIRA</h4>
+                                <h3>Lead Developer R&D – Webedia / AlloCiné</h3>
+                                <div class="review">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial_content">
+                                <p>
+                                    {% trans %}
+                                        It was a pleasure to follow Adrien during his training because he is a curious, rigorous and autonomous person. In addition, it has the main quality that every developer must have: persistence. I was also impressed by his ability to adapt to languages, technologies and a profession that were completely unknown to him a few months ago. If there was a vacancy in my company for a junior backend / symfony I would highly recommend Adrien's profile.
+                                    {% endtrans %}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="single_testimonial">
+                            <div class="testimonial_head">
+                                <img src="{{ asset('img/quote.png') }}" alt="quote">
+                                <h4>Annie BEAUGET</h4>
+                                <h3>Project Lead – MSD CHIBRET</h3>
+                                <div class="review">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial_content">
+                                <p>Adrien shows all competencies that might be of interest for a leading company: highly
+                                    educational background, strong exposure to various fields of what makes a business
+                                    [...], strong results in every project conducted, strong relationship and leadership,
+                                    autonomy, strong client of customer service, hard worker. Devoted and strongly
+                                    engaged to work.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-1"></div>
+            </div>
+        </div>
+    </div>
+    <!--================ End Testimonial Area =================-->
+{% endblock %}

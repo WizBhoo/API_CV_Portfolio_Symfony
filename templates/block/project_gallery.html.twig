@@ -1,0 +1,121 @@
+<section class="section_gap portfolio_area" id="work">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <div class="main-title">
+                    <h1>{% trans %}My Portfolio{% endtrans %}</h1>
+                    <p>
+                        {% trans %}
+                            Developed as part of my conversion training or for personal purposes, I invite you to browse the projects conducted to illustrate my skills.
+                        {% endtrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="projects_fillter">
+                    <ul class="filter list">
+                        <li class="active" data-filter="*">{% trans %}All Categories{% endtrans %}</li>
+                        <li data-filter=".cms">CMS</li>
+                        <li data-filter=".html-css">HTML/CSS</li>
+                        <li data-filter=".php">PHP</li>
+                        <li data-filter=".symfony">Symfony</li>
+                        <li data-filter=".other">{% trans %}Others{% endtrans %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="projects_inner row grid">
+            <div class="grid-sizer col-sm-6 col-md-3 col-lg-3"></div>
+            <div class="col-lg-6 col-sm-6 col-sm-12 cms html-css grid-item">
+                <div class="projects_item">
+                    <img class="img-fluid w-100" src="{{ asset('img/works/work1.jpg') }}" alt="Chalets &amp; Caviar">
+                    <div class="projects_text">
+                        <a href="">
+                            <h4>Chalets &amp; Caviar</h4>
+                        </a>
+                        <p>WordPress - HTML5 &amp; CSS3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-sm-12 other grid-item">
+                <div class="projects_item">
+                    <img class="img-fluid w-100" src="{{ asset('img/works/work7.jpg') }}" alt="Docker Stack">
+                    <div class="projects_text">
+                        <a href="">
+                            <h4>Docker Stack</h4>
+                        </a>
+                        <p>Docker - Docker-compose</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 other grid-item">
+                <div class="projects_item">
+                    <img class="img-fluid w-100" src="{{ asset('img/works/work3.jpg') }}" alt="ExpressFood">
+                    <div class="projects_text">
+                        <a href="">
+                            <h4>ExpressFood</h4>
+                        </a>
+                        <p>UML - MySQL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 php html-css other grid-item">
+                <div class="projects_item">
+                    <img class="img-fluid w-100" src="{{ asset('img/works/work5.jpg') }}" alt="Mon site CV &amp; Blog">
+                    <div class="projects_text">
+                        <a href="">
+                            <h4>Mon site CV &amp; Blog</h4>
+                        </a>
+                        <p>MVC &amp; POO en PHP - MySQL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 symfony php grid-item">
+                <div class="projects_item">
+                    <img class="img-fluid w-100" src="{{ asset('img/works/work4.jpg') }}" alt="SnowTricks">
+                    <div class="projects_text">
+                        <a href="">
+                            <h4>SnowTricks</h4>
+                        </a>
+                        <p>Symfony</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 symfony php other grid-item">
+                <div class="projects_item">
+                    <img class="img-fluid w-100" src="{{ asset('img/works/work8.jpg') }}" alt="API">
+                    <div class="projects_text">
+                        <a href="">
+                            <h4>API</h4>
+                        </a>
+                        <p>API REST</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 brand symfony php other grid-item">
+                <div class="projects_item">
+                    <img class="img-fluid w-100" src="{{ asset('img/works/work6.jpg') }}" alt="ToDo &amp; Co">
+                    <div class="projects_text">
+                        <a href="">
+                            <h4>ToDo &amp; Co</h4>
+                        </a>
+                        <p>Testing &amp; Refactoring</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 html-css grid-item">
+                <div class="projects_item">
+                    <img class="img-fluid w-100" src="{{ asset('img/works/work2.jpg') }}" alt="Festi'Films Plein Air">
+                    <div class="projects_text">
+                        <a href="">
+                            <h4>Festi'Films Plein Air</h4>
+                        </a>
+                        <p>HTML5 &amp; CSS3 - Bootstrap 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
