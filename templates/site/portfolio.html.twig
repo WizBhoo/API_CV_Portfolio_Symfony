@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Adrien PIERRARD - Portfolio" %}
+
+{% block body %}
+
+    <!--================ Start portfolio Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>{% trans %}My Portfolio{% endtrans %}</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Portfolio Banner Area =================-->
+
+    <!--================ Start Portfolio Area =================-->
+
+    {% include('block/project_gallery.html.twig') %}
+
+    <!--================ End Portfolio Area =================-->
+
+{% endblock %}

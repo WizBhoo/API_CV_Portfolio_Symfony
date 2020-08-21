@@ -14,7 +14,7 @@
   "Fort de dix années accomplies au sein des industries de santé en tant qu'Ingénieur en Management par la Qualité et Réglementations, j'ai fait le choix de remettre en question mon parcours professionnel pour apporter plus de réalisations concrètes à mon quotidien de travail."
 "Computer lover with easy to understand programming languages, it was obvious for me to stretch my career towards applications development and more particularly related to the Web.":
   "Passionné d'informatique et faisant preuve d'aisance dans l'appréhension des langages de programmation, ce fut donc une évidence pour moi de faire tendre ma carrière vers le développement d'applications et plus particulièrement liées au Web."
-"Self-taught, I therefore undertook a complete independent training course to become a PHP / Symfony Web Application Developer. This CV site, developed as part of my training, is the ideal opportunity to concretely present my skills. <br> Visit my blog to find out more about my background and for more information, don't hesitate to":
+"Self-taught, I therefore undertook a complete independent training course to become a PHP / Symfony Web Application Developer. This CV site, developed as part of my training, is the ideal opportunity to concretely present my skills.<br> Visit my blog to find out more about my background and for more information, don't hesitate to":
   "Autodidacte, j'ai donc entrepris une formation complète en autonomie pour devenir Développeur d'Application Web PHP / Symfony. Ce site CV, réalisé dans le cadre de ma formation, est l'opportunité idéale pour vous présenter concrètement mes compétences acquises.<br> Visitez mon blog pour en savoir plus sur mon parcours et pour plus de renseignements, n'hésitez pas à"
 'contact me': 'me contacter'
 'Visit my Blog': 'Visitez mon Blog'
@@ -29,3 +29,23 @@
   "Réalisés dans le cadre de ma reconversion ou à des fins personnelles, je vous invite ici à parcourir les projets que j'ai réalisés pour illustrer mes compétences."
 'All Categories': 'Toutes Catégories'
 'Others': 'Autres'
+# Trans projects pages
+'Project': 'Projet'
+'Period': 'Réalisation'
+'Category': 'Catégorie'
+'Skills': 'Compétences'
+'See website': 'Voir site'
+'See evaluation': 'Voir évaluation'
+'Project expectations': 'Attentes du projet'
+'OCR training project': 'Projet de formation OCR'
+'December': 'Décembre'
+'Customer Manual': 'Notice Client'
+"This project takes part of my training course to become a PHP / Symfony Web Application Developer.": "Ce projet s'est inscrit dans le cadre de mon parcours de formation pour devenir Développeur d'Application Web PHP / Symfony."
+"The goal was to integrate a Wordpress theme for a client.": "L'objectif était d'intégrer un thème Wordpress pour un client."
+'The real estate agency "Chalets et Caviar" in Courchevel has around 15 luxury chalets for sale and around 20 for rent. However, it does not yet have a website to promote the sale and rental of its chalets.': "L’agence immobilière \"Chalets et Caviar\" de Courchevel possède une quinzaine de chalets de luxe à la vente et une vingtaine en location. Cependant, elle ne possède pas encore de site web pour promouvoir la vente et la location de ses chalets."
+'During a first meeting, the director of the agency expresses the following expectations:': "Lors d’une première réunion, la directrice de l’agence exprime les attentes suivantes :"
+'A manageable WordPress website.': 'Un site web WordPress administrable par ses soins.'
+"A clear and refined design highlighting the agency's luxury line.": "Un design clair et épuré mettant en avant la ligne de luxe de l'agence."
+'Separate categories for the chalets presentation for sale and for rent.': "Des catégories distinctes pour la présentation des chalets à vendre et à louer."
+'A page that contains the agency contact details with a functional contact form.': "Une page contenant les coordonnées de l'agence avec un formulaire de contact fonctionnel."
+'1 Administrator Account (full access) and 2 Editors (restricted access to the chalets C.R.U.D system).': "1 Compte Administrateur (plein accès) et 2 Editeurs (accès restrincts au C.R.U.D des chalets)."
