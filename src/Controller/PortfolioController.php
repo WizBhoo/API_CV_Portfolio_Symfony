@@ -34,7 +34,7 @@ class PortfolioController extends AbstractController
     public function show(string $project): Response
     {
         $view = 'site/works/'.$project.'.html.twig';
-        if (!file_exists('../templates/'.$view)) {
+        if (!$this->get('twig')->getLoader()->exists($view)) {
             throw $this->createNotFoundException('The project does not exist');
         }
 
