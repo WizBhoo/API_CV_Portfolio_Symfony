@@ -2,3 +2,13 @@ home:
   path: /
   controller: App\Controller\HomeController::home
   methods: GET
+
+app_portfolio:
+  path: /portfolio
+  controller: App\Controller\PortfolioController::portfolio
+  methods: GET
+
+app_project_show:
+  path: /portfolio/{project}
+  controller: App\Controller\PortfolioController::show
+  methods: GET

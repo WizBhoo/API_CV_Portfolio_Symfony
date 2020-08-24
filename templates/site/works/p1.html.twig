@@ -1,0 +1,88 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Adrien PIERRARD - Chalets &amp; Caviar" %}
+
+{% block body %}
+
+    <!--================ Start portfolio Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>Chalets &amp; Caviar</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Portfolio Banner Area =================-->
+
+    <!--================ Start Portfolio Details Area =================-->
+    <section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="{{ asset('img/works/project1.png') }}" alt="Chalets &amp; Caviar">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio_right_text mt-30">
+                            <h4>{% trans %}Project{% endtrans %} : Chalets &amp; Caviar</h4>
+                            <p>
+                                {% trans %}This project takes part of my training course to become a PHP / Symfony Web Application Developer.{% endtrans %}
+                                {% trans %}The goal was to integrate a Wordpress theme for a client.{% endtrans %}
+                            </p>
+                            <ul class="list">
+                                <li><span>{% trans %}Period{% endtrans %}</span>: {% trans %}December{% endtrans %} 2019</li>
+                                <li><span>{% trans %}Category{% endtrans %}</span>: {% trans %}OCR training project{% endtrans %}</li>
+                                <li>
+                                    <span>{% trans %}Skills{% endtrans %}</span>:
+                                    <i class="fab fa-wordpress"></i> /
+                                    <i class="fab fa-html5"></i> /
+                                    <i class="fab fa-css3"></i>
+                                </li>
+                                <li>
+                                    <span>Documents</span>:
+                                    <a href="{{ asset('download/Doc_utilisation_site_Chalets-Caviar.pdf') }}" target="_blank">
+                                        <i class="fas fa-file-pdf"></i> {% trans %}Customer Manual{% endtrans %}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="portfolio_right_btn col-xl-8 offset-xl-2 col-md-12 mt-25">
+                                <a href="https://chalets-caviar.adrien-pierrard.fr"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See website{% endtrans %}
+                                </a>
+                                <a href="{{ asset('download/project1_eval.pdf') }}"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See evaluation{% endtrans %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>{% trans %}Project expectations{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        The real estate agency "Chalets et Caviar" in Courchevel has around 15 luxury chalets for sale and around 20 for rent. However, it does not yet have a website to promote the sale and rental of its chalets.
+                    {% endtrans %}<br>
+                    {% trans %}During a first meeting, the director of the agency expresses the following expectations:{% endtrans %}<br>
+                    - {% trans %}A manageable WordPress website.{% endtrans %}<br>
+                    - {% trans %}A clear and refined design highlighting the agency's luxury line.{% endtrans %}<br>
+                    - {% trans %}Separate categories for the chalets presentation for sale and for rent.{% endtrans %}<br>
+                    - {% trans %}A page that contains the agency contact details with a functional contact form.{% endtrans %}<br>
+                    - {% trans %}1 Administrator Account (full access) and 2 Editors (restricted access to the chalets C.R.U.D system).{% endtrans %}
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--================ Start Portfolio Details Area =================-->
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Adrien PIERRARD - Festi'Films Plein Air" %}
+
+{% block body %}
+
+    <!--================ Start portfolio Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>Festi'Films Plein Air</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Portfolio Banner Area =================-->
+
+    <!--================ Start Portfolio Details Area =================-->
+    <section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="{{ asset('img/works/project2.png') }}" alt="Festi'Films Plein Air">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio_right_text mt-30">
+                            <h4>{% trans %}Project{% endtrans %} : Festival des Films de Plein Air</h4>
+                            <p>
+                                {% trans %}This project takes part of my training course to become a PHP / Symfony Web Application Developer.{% endtrans %}
+                                {% trans %}The goal was to analyze the customer needs for its film festival by writing detailed specifications. It was also necessary to realize the website prototype.{% endtrans %}
+                            </p>
+                            <ul class="list">
+                                <li><span>{% trans %}Period{% endtrans %}</span>: Dec. 2019 / Jan. 2020</li>
+                                <li><span>{% trans %}Category{% endtrans %}</span>: {% trans %}OCR training project{% endtrans %}</li>
+                                <li>
+                                    <span>{% trans %}Skills{% endtrans %}</span>:
+                                    <i class="fab fa-html5"></i> /
+                                    <i class="fab fa-css3"></i> /
+                                    <i class="fab fa-bootstrap"></i>
+                                </li>
+                                <li><span>{% trans %}Methodology{% endtrans %}</span>: Sequential / Agile</li>
+                                <li>
+                                    <span>Documents</span>:
+                                    <a href="{{ asset('download/CDC_Specifications_Tech_Festifilms.pdf') }}" target="_blank">
+                                        <i class="fas fa-file-pdf"></i> {% trans %}Specifications{% endtrans %}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="portfolio_right_btn col-xl-8 offset-xl-2 col-md-12 mt-25">
+                                <a href="https://festifilms-pleinair.adrien-pierrard.fr"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See website{% endtrans %}
+                                </a>
+                                <a href="{{ asset('download/project2_eval.pdf') }}"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See evaluation{% endtrans %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>{% trans %}Project expectations{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        The Outdoor Film Festival organizer aims to select and screen author films from August 5 to 8, from 6 p.m. to midnight, at Parc Monceau in Paris. Her association has just been created and she has a limited budget. She needs :
+                    {% endtrans %}<br>
+                    - {% trans %}A graphic charter{% endtrans %}<br>
+                    - {% trans %}To communicate online about the festival (presentation and news){% endtrans %}<br>
+                    - {% trans %}To announce the films program{% endtrans %}<br>
+                    - {% trans %}To collect reservations via a pre-registration system.{% endtrans %}<br>
+                    {% trans %}
+                        She asks us to list the corresponding technical features and to propose a suitable technical solution. By selecting the solution most able to meet their expectations, she should see a first version of the site (prototype).
+                    {% endtrans %}
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--================ Start Portfolio Details Area =================-->
+
+{% endblock %}

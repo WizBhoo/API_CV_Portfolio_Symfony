@@ -1,0 +1,81 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Adrien PIERRARD - Docker Stack" %}
+
+{% block body %}
+
+    <!--================ Start portfolio Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>Docker Stack</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Portfolio Banner Area =================-->
+
+    <!--================ Start Portfolio Details Area =================-->
+    <section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="{{ asset('img/works/project7.png') }}" alt="Docker Stack">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio_right_text mt-30">
+                            <h4>{% trans %}Project{% endtrans %} : Docker Stack</h4>
+                            <p>
+                                {% trans %}This project takes part of my personal working environment implementation.{% endtrans %}
+                                {% trans %}
+                                    The goal was for me to obtain additional skills as quickly as possible allowing me to develop locally on my computer in flexible and comfortable conditions without remaining dependent on it.
+                                {% endtrans %}
+                                {% trans %}
+                                    So I decided to learn how to use Docker to create stacks suited to my needs. This work was done with the help of my "Jedi Master"
+                                {% endtrans %} - Yann LUCAS.
+                            </p>
+                            <ul class="list">
+                                <li><span>{% trans %}Category{% endtrans %}</span>: {% trans %}Working environment{% endtrans %}</li>
+                                <li><span>{% trans %}Skills{% endtrans %}</span>: <i class="fab fa-docker"></i> / Docker-Compose</li>
+                                <li>
+                                    <span>OS</span>:
+                                    <i class="fab fa-apple"></i> /
+                                    <i class="fab fa-ubuntu"></i>
+                                </li>
+                                <li><span>Terminal App</span>: iTerm2 / Tilix</li>
+                                <li>
+                                    <span>Support</span>:
+                                    <a href="https://github.com/drixs6o9" target="_blank">
+                                        <i class="fab fa-github"></i> GitHub Yann LUCAS
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="portfolio_right_btn col-xl-8 offset-xl-2 col-md-12 mt-25">
+                                <a href="https://github.com/WizBhoo/docker_php"
+                                   class="primary-btn" target="_blank">
+                                    PHP
+                                </a>
+                                <a href="https://github.com/WizBhoo/docker_sf3-sf4"
+                                   class="primary-btn" target="_blank">
+                                    Symfony 3-4-5
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ Start Portfolio Details Area =================-->
+
+{% endblock %}

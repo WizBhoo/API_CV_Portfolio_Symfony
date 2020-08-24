@@ -14,7 +14,7 @@
   "Fort de dix années accomplies au sein des industries de santé en tant qu'Ingénieur en Management par la Qualité et Réglementations, j'ai fait le choix de remettre en question mon parcours professionnel pour apporter plus de réalisations concrètes à mon quotidien de travail."
 "Computer lover with easy to understand programming languages, it was obvious for me to stretch my career towards applications development and more particularly related to the Web.":
   "Passionné d'informatique et faisant preuve d'aisance dans l'appréhension des langages de programmation, ce fut donc une évidence pour moi de faire tendre ma carrière vers le développement d'applications et plus particulièrement liées au Web."
-"Self-taught, I therefore undertook a complete independent training course to become a PHP / Symfony Web Application Developer. This CV site, developed as part of my training, is the ideal opportunity to concretely present my skills. <br> Visit my blog to find out more about my background and for more information, don't hesitate to":
+"Self-taught, I therefore undertook a complete independent training course to become a PHP / Symfony Web Application Developer. This CV site, developed as part of my training, is the ideal opportunity to concretely present my skills.<br> Visit my blog to find out more about my background and for more information, don't hesitate to":
   "Autodidacte, j'ai donc entrepris une formation complète en autonomie pour devenir Développeur d'Application Web PHP / Symfony. Ce site CV, réalisé dans le cadre de ma formation, est l'opportunité idéale pour vous présenter concrètement mes compétences acquises.<br> Visitez mon blog pour en savoir plus sur mon parcours et pour plus de renseignements, n'hésitez pas à"
 'contact me': 'me contacter'
 'Visit my Blog': 'Visitez mon Blog'
@@ -29,3 +29,182 @@
   "Réalisés dans le cadre de ma reconversion ou à des fins personnelles, je vous invite ici à parcourir les projets que j'ai réalisés pour illustrer mes compétences."
 'All Categories': 'Toutes Catégories'
 'Others': 'Autres'
+# Common trans projects pages
+'Project': 'Projet'
+'Period': 'Réalisation'
+'Category': 'Catégorie'
+'Skills': 'Compétences'
+'Methodology': 'Méthodologie'
+'See': 'Voir'
+'See website': 'Voir site'
+'See evaluation': 'Voir évaluation'
+'See UML': 'Voir UML'
+'Project expectations': 'Attentes du projet'
+'Constraints': 'Contraintes'
+'Context': 'Contexte'
+'Technical documentation': 'Documentation technique'
+'OCR training project': 'Projet de formation OCR'
+'Working environment': 'Environnement de travail'
+'UML software analysis': 'Analyse logiciel UML'
+'February': 'Février'
+'March': 'Mars'
+'April': 'Avril'
+'May': 'Mai'
+'June': 'Juin'
+'July': 'Juillet'
+'December': 'Décembre'
+'Customer Manual': 'Notice Client'
+'Specifications': 'Cahier Des Charges'
+'Quality &amp; Performance Audit': 'Audit Qualité &amp; Performance'
+'This project takes part of my training course to become a PHP / Symfony Web Application Developer.':
+  "Ce projet s'est inscrit dans le cadre de mon parcours de formation pour devenir Développeur d'Application Web PHP / Symfony."
+'This project takes part of my personal working environment implementation.':
+  "Ce projet s'est inscrit dans le cadre de la mise en place de mon environnement de travail personnel."
+# Specific trans p1
+"The goal was to integrate a Wordpress theme for a client.": "L'objectif était d'intégrer un thème Wordpress pour un client."
+'The real estate agency "Chalets et Caviar" in Courchevel has around 15 luxury chalets for sale and around 20 for rent. However, it does not yet have a website to promote the sale and rental of its chalets.':
+  "L’agence immobilière \"Chalets et Caviar\" de Courchevel possède une quinzaine de chalets de luxe à la vente et une vingtaine en location. Cependant, elle ne possède pas encore de site web pour promouvoir la vente et la location de ses chalets."
+'During a first meeting, the director of the agency expresses the following expectations:':
+  "Lors d’une première réunion, la directrice de l’agence exprime les attentes suivantes :"
+'A manageable WordPress website.': 'Un site web WordPress administrable par ses soins.'
+"A clear and refined design highlighting the agency's luxury line.": "Un design clair et épuré mettant en avant la ligne de luxe de l'agence."
+'Separate categories for the chalets presentation for sale and for rent.': "Des catégories distinctes pour la présentation des chalets à vendre et à louer."
+'A page that contains the agency contact details with a functional contact form.':
+  "Une page contenant les coordonnées de l'agence avec un formulaire de contact fonctionnel."
+'1 Administrator Account (full access) and 2 Editors (restricted access to the chalets C.R.U.D system).':
+  "1 Compte Administrateur (plein accès) et 2 Editeurs (accès restrincts au C.R.U.D des chalets)."
+# Specific trans p2
+'The goal was to analyze the customer needs for its film festival by writing detailed specifications. It was also necessary to realize the website prototype.':
+  "L'objectif était d'analyser les besoins client pour son festival de films en établissant le cahier des charges contenant les spécifications détaillées. Il fallait également réaliser le prototype du site."
+'The Outdoor Film Festival organizer aims to select and screen author films from August 5 to 8, from 6 p.m. to midnight, at Parc Monceau in Paris. Her association has just been created and she has a limited budget. She needs :':
+  "L'organisatrice du festival des Films de Plein Air ambitionne de sélectionner et de projeter des films d'auteur du 5 au 8 août, de 18 heures à minuit, au parc Monceau à Paris. Son association vient juste d'être créée et elle dispose d'un budget limité. Elle a besoin :"
+'A graphic charter': "D'une charte graphique"
+'To communicate online about the festival (presentation and news)': 'De communiquer en ligne sur son festival (présentation et actualités)'
+'To announce the films program': "D'annoncer la programmation des films projetés"
+'To collect reservations via a pre-registration system.': 'De recueillir les réservations via un système de pré-inscription.'
+'She asks us to list the corresponding technical features and to propose a suitable technical solution. By selecting the solution most able to meet their expectations, she should see a first version of the site (prototype).':
+  "Elle nous demande de lister les fonctionnalités techniques correspondantes et de proposer une solution technique adaptée. En sélectionnant la solution la plus à même de répondre à ses attentes, elle doit voir une première version du site (prototype)."
+# Specific trans p3
+'The goal was to design the technical solution for an online catering application.':
+  "L'objectif était de concevoir la solution technique d'une application de restauration en ligne."
+'The very young startup ExpressFood aims to deliver quality food at home in less than 20 minutes thanks to a network of bicycle delivery people. Every day, ExpressFood prepares 2 dishes and 2 desserts at its HQ in collaboration with experienced chefs. These dishes are cold packaged and then sent to home delivery people who then "maraud" the streets while awaiting delivery.':
+  "La toute jeune startup ExpressFood ambitionne de livrer des plats de qualité à domicile en moins de 20 minutes grâce à un réseau de livreurs à vélo. Chaque jour, ExpressFood prépare 2 plats et 2 desserts à son QG en collaboration avec des chefs expérimentés. Ces plats sont conditionnés à froid puis transmis à des livreurs à domicile qui \"maraudent\" ensuite dans les rues en attendant une livraison."
+'As soon as a customer has ordered, one of the delivery people (who already has the dishes in a bag) is assigned to deliver in less than 20 minutes. On its application, ExpressFood offers its customers to order one or more dishes and desserts. Shipping costs are free. The dishes change every day. Once the order has been placed, the customer has access to a page indicating whether a delivery person has taken his order and the estimated time before delivery.':
+  "Dès qu'un client a commandé, l'un des livreurs (qui possède déjà les plats dans un sac) est missionné pour livrer en moins de 20 minutes. Sur son application, ExpressFood propose à ses clients de commander un ou plusieurs plats et desserts. Les frais de livraison sont gratuits. Les plats changent chaque jour. Une fois la commande passée, le client a accès à une page lui indiquant si un livreur a pris sa commande et le temps estimé avant livraison."
+'Thanks to UML, ExpressFood needs you to design its database. This involves storing in particular the list of customers, the different daily specials, delivery people with their status and position, orders placed, etc...':
+  "Grâce au langage UML, ExpressFood a besoin que vous conceviez sa base de données. Il s'agit d'y stocker notamment la liste des clients, des différents plats du jour, des livreurs avec leur statut et leur position, des commandes passées, etc..."
+'Deliverables requested are': 'Les livrables demandés sont'
+'Use case and sequence diagrams (order creation, adding dish of the day, order delivery)':
+  "Les diagrammes de cas d’utilisation et de séquences (création commande, ajout plat du jour, livraison commande)"
+'Classes diagram': 'Le diagramme de classes'
+'The Physical Data Model - PDM': 'Le Modèle Physique de Données - MPD'
+'The MySQL database containing a data demo set': 'La Base De Données MySQL contenant un jeu de données de démo'
+# Specific trans p4
+'The goal was to develop the SnowTricks community website from A to Z using the Symfony Framework.':
+  "L'objectif était de développer de A à Z le site communautaire SnowTricks à l'aide du Framework Symfony."
+'Jimmy Sweat is an ambitious snowboarding entrepreneur. Its objective is the creation of a collaborative website to promote this sport and to help tricks learning.':
+  "Jimmy Sweat est un entrepreneur ambitieux passionné de snowboard. Son objectif est la création d'un site collaboratif pour faire connaître ce sport auprès du grand public et aider à l'apprentissage des figures (tricks)."
+'He wants to capitalize on content provided by Internet users in order to develop rich content and arouse the interest of site users. Subsequently, Jimmy wants to develop a business of connecting with snowboard brands thanks to the traffic that the content will have generated.':
+  "Il souhaite capitaliser sur du contenu apporté par les internautes afin de développer un contenu riche et suscitant l’intérêt des utilisateurs du site. Par la suite, Jimmy souhaite développer un business de mise en relation avec les marques de snowboard grâce au trafic que le contenu aura généré."
+'For this project, we must focus on the website technical creation for Jimmy.': 'Pour ce projet, il faut se concentrer sur la création technique du site pour Jimmy.'
+"Being in charge to develop the website meeting Jimmy's needs, you must therefore implement the following features": 'Etant chargé de développer le site répondant aux besoins de Jimmy, vous devez ainsi implémenter les fonctionnalités suivantes'
+'A snowboard figures gallery. Just integrate 10 figures, the rest will be captured by Internet users.': "Un annuaire des figures de snowboard. Contentez-vous d'intégrer 10 figures, le reste sera saisi par les internautes."
+'Figures management (creation, modification, consultation).': 'La gestion des figures (création, modification, consultation).'
+'A space for discussion common to all the figures.': 'Un espace de discussion commun à toutes les figures.'
+'To implement these features, you must create the following pages': 'Pour implémenter ces fonctionnalités, vous devez créer les pages suivantes'
+'The homepage where the figures list will appear': "La page d’accueil où figurera la liste des figures"
+'The page to create a new figure': "La page de création d'une nouvelle figure"
+'The page to edit a figure': "La page de modification d'une figure"
+'The presentation page of a figure (containing the common discussion area around a figure).': "La page de présentation d’une figure (contenant l’espace de discussion commun autour d’une figure)."
+'All detailed specifications for the pages to be developed are provided.': "L’ensemble des spécifications détaillées pour les pages à développer est fourni."
+'It is necessary that the page URLs allow a quick understanding of what the page represents and that SEO is facilitated. The use of third-party bundles is prohibited except for initial data. It is necessary to rely mainly on official documentation in order to fulfill the given objectives.':
+  "Il faut que les URL de page permettent une compréhension rapide de ce que la page représente et que le référencement naturel soit facilité. L’utilisation de bundles tiers est interdite sauf pour les données initiales. Il faut se baser principalement sur la documentation officielle afin de remplir les objectifs donnés."
+'The website design is completely free, however be careful to respect the wireframes provided for the page template. The site will have to be Responsive Design.':
+  'Le design du site web est laissé complètement libre, attention cependant à respecter les wireframes fournis pour le gabarit des pages. Il faudra que le site soit Responsive Design.'
+'First, you will have to write all the issues / tickets in order to break down the work methodically to ensure that the entire customer need is well understood. The tickets / issues will be written in a GitHub repository created beforehand. All snowboard tricks must be present when the web application is initialized.':
+  "En premier lieu, il faudra écrire l’ensemble des issues/tickets afin de découper le travail méthodiquement pour s'assurer que l’ensemble du besoin client est bien compris. Les tickets/issues seront écrits dans un repository GitHub créé au préalable. L’ensemble des figures de snowboard doivent être présentes à l’initialisation de l’application web."
+'You will use an external bundle to load this data.': 'Vous utiliserez un bundle externe pour charger ces données.'
+# Specific trans p5
+'Create my first PHP website': 'Créer mon premier site en PHP'
+'The goal was to create my first PHP website containing a blog.': "L'objectif était de créer mon premier site en PHP intégrant un blog."
+'You need visibility to be able to convince your future employers / clients at a glance. You are a PHP developer, so now is the time to show your talents through a blog in your colors.':
+  "Vous avez besoin de visibilité pour pouvoir convaincre vos futurs employeurs/clients en un seul regard. Vous êtes développeur PHP, il est donc temps de montrer vos talents au travers d’un blog à vos couleurs."
+'The project is therefore to develop your professional blog. This website is divided into two main groups of pages: pages useful to all visitors and pages used to administer your blog.':
+  "Le projet est donc de développer votre blog professionnel. Ce site web se décompose en deux grands groupes de pages : les pages utiles à tous les visiteurs et les pages permettant d’administrer votre blog."
+'Here is the pages list that must be accessible from your website':
+  'Voici la liste des pages qui devront être accessibles depuis votre site web'
+'the homepage': "la page d'accueil"
+'the page listing all the blog posts and the page displaying a blog post': "la page listant l’ensemble des blogs posts et celle affichant un blog post"
+'the pages allowing to add / modify / delete a blog post': "les pages permettant d'ajouter / modifier / supprimer un blog post"
+'user login / registration pages': 'les pages de connexion/enregistrement des utilisateurs'
+'You will develop an administration part which must be accessible only to registered and validated users. The administration pages will therefore be accessible on conditions and you will ensure the security of the administration part.':
+  "Vous développerez une partie administration qui devra être accessible uniquement aux utilisateurs inscrits et validés. Les pages d’administration seront donc accessibles sur conditions et vous veillerez à la sécurité de la partie administration."
+'On the home page, you must present the following information: name and first name, photo and / or logo, a catchphrase, a menu allowing you to navigate among all the pages of the site, a contact form by email functional, a link to your CV in PDF format and all the links to the social networks where you can be followed (GitHub, LinkedIn, Twitter, etc.).':
+  "Sur la page d’accueil, il faudra présenter les informations suivantes : nom et prénom, photo et/ou logo, une phrase d’accroche, un menu permettant de naviguer parmi l’ensemble des pages du site, un formulaire de contact par mail fonctionnel, un lien vers votre CV au format PDF et l’ensemble des liens vers les réseaux sociaux où l’on peut vous suivre (GitHub, LinkedIn, Twitter…)."
+'On the page listing all the blog posts (from the most recent to the oldest), you must display the following information for each blog post: the title, the date of last modification, the chapter and a link to the blog post.':
+  "Sur la page listant tous les blogs posts (du plus récent au plus ancien), il faut afficher les informations suivantes pour chaque blog post : le titre, la date de dernière modification, le châpo et un lien vers le blog post."
+'On the page presenting the details of a blog post, the following information must be displayed: the title, the resume, the content, the author, the date of the last update, the form allowing to add a comment (submitted for validation) and the lists of comments validated and published.':
+  "Sur la page présentant le détail d’un blog post, il faut afficher les informations suivantes : le titre, le chapô, le contenu, l’auteur, la date de dernière mise à jour, le formulaire permettant d’ajouter un commentaire (soumis pour validation) et les listes des commentaires validés et publiés."
+'On the page to edit a blog post, the user has the possibility to modifythe title, resume, author and content fields.':
+  "Sur la page permettant de modifier un blog post, l’utilisateur a la possibilité de modifier les champs titre, chapô, auteur et contenu."
+'In the footer menu, there should be a link to access the blog administration.':
+  "Dans le footer menu, il doit figurer un lien pour accéder à l’administration du blog."
+'This time, everything will be developed by you. The only lines of code that can come from elsewhere will be those of the Bootstrap theme, which you will be careful to choose. Presentation matters! It is also allowed to use one or more external libraries provided that they are integrated using Composer.':
+  "Cette fois-ci, tout sera développé par vos soins. Les seules lignes de code qui pourront provenir d’ailleurs seront celles du thème Bootstrap, que vous prendrez grand soin de choisir. La présentation, ça compte ! Il est également autorisé d’utiliser une ou plusieurs librairies externes à condition qu’elles soient intégrées grâce à Composer."
+'The blog must be responsive (mobile phone, phablet, tablet…). On the administration part, you will ensure that only people with "administrator" right have access, other users can only comment on articles (with validation before publication). You will make sure that there are no security vulnerabilities (XSS, CSRF, SQL Injection, session hijacking, possible PHP script upload, etc.). Your project must be pushed and available on GitHub. It is advisable to work with pull requests.':
+  "Le blog doit être navigable aisément sur un mobile (téléphone mobile, phablette, tablette…). Sur la partie administration, vous veillerez à ce que seules les personnes ayant le droit \"administrateur\" aient l’accès, les autres utilisateurs pourront uniquement commenter les articles (avec validation avant publication). Vous vous assurerez qu’il n’y a pas de failles de sécurité (XSS, CSRF, SQL Injection, session hijacking, upload possible de script PHP…). Votre projet doit être poussé et disponible sur GitHub. Il est conseillé de travailler avec des pull requests."
+'Since the majority of project communications on GitHub are in English, your commits must be in English. You will need to create all the issues (tickets) corresponding to the tasks you will have to perform to complete the project.':
+  "Dans la mesure où la majorité des communications concernant les projets sur GitHub se font en anglais, il faut que vos commits soient en anglais. Vous devrez créer l’ensemble des issues (tickets) correspondant aux tâches que vous aurez à effectuer pour mener à bien le projet."
+'Be sure to validate your tickets to make sure that they cover all the requests of the project. Give an indicative estimate in time or effort points (if you are familiar with the agile methodology) and try to keep this estimate. Writing these tickets will allow you to agree on a common vocabulary. It is highly appreciated that they are written in English!':
+  "Veillez à bien valider vos tickets pour vous assurer que ceux-ci couvrent bien toutes les demandes du projet. Donnez une estimation indicative en temps ou en points d’effort (si la méthodologie agile vous est familière) et tentez de tenir cette estimation. L’écriture de ces tickets vous permettra de vous accorder sur un vocabulaire commun. Il est fortement apprécié qu’ils soient écrits en anglais !"
+'Your project will have to be monitored via SymfonyInsight, or Codacy for the quality of the code. You will ensure you get a minimum silver medal (for SymfonyInsight). In addition, compliance with PSR is recommended in order to offer a code that is understandable and easily upgradeable.':
+  "Votre projet devra être suivi via SymfonyInsight, ou Codacy pour la qualité du code. Vous veillerez à obtenir une médaille d'argent au minimum (pour SymfonyInsight). En complément, le respect des PSR est recommandé afin de proposer un code compréhensible et facilement évolutif."
+# Specific trans p6
+'The goal was to improve an existing application of ToDo &amp; Co.': "L'objectif était d'améliorer une application existante de ToDo &amp; Co."
+'You have just joined a startup whose core business is an application to manage its daily tasks. The company has just been set up, and the application had to be developed at full speed to allow potential investors to be shown that the concept is viable (known as Minimum Viable Product or MVP). The choice of the previous developer was to use the PHP Symfony framework.':
+  "Vous venez d’intégrer une startup dont le cœur de métier est une application permettant de gérer ses tâches quotidiennes. L’entreprise vient tout juste d’être montée, et l’application a dû être développée à toute vitesse pour permettre de montrer à de potentiels investisseurs que le concept est viable (on parle de Minimum Viable Product ou MVP). Le choix du développeur précédent a été d’utiliser le framework PHP Symfony."
+"Good news ! ToDo & Co has finally succeeded in raising funds to allow the development of the company and especially the application. Your role here is therefore to improve the quality of the application. Quality is a concept that encompasses many subjects: we often talk about code quality, but there is also the quality perceived by the user of the application or the quality perceived by the company's employees, and and finally the quality you perceive when you have to work on the project.":
+  "Bonne nouvelle ! ToDo & Co a enfin réussi à lever des fonds pour permettre le développement de l’entreprise et surtout de l’application. Votre rôle ici est donc d’améliorer la qualité de l’application. La qualité est un concept qui englobe bon nombre de sujets : on parle souvent de qualité de code, mais il y a également la qualité perçue par l’utilisateur de l’application ou encore la qualité perçue par les collaborateurs de l’entreprise, et enfin la qualité que vous percevez lorsqu’il vous faut travailler sur le projet."
+'So, for this specialization project, you are in the shoes of an experienced developer in charge of the following tasks: new features implementation, the correction of some anomalies, and the automated tests implementation.':
+  "Ainsi, pour ce projet de spécialisation, vous êtes dans la peau d’un développeur expérimenté en charge des tâches suivantes : l’implémentation de nouvelles fonctionnalités, la correction de quelques anomalies, et l’implémentation de tests automatisés."
+'You are also in charge to analyze the project using tools that allow you to have an overview of the code quality and the different areas of the application performance. You are not asked to correct the points raised by the code quality and performance audit. That said, if time allows, ToDo & Co will be happy to have you reduce the technical debt of this app.':
+  "Il vous est également demandé d’analyser le projet grâce à des outils vous permettant d’avoir une vision d’ensemble de la qualité du code et des différents axes de performance de l’application. Il ne vous est pas demandé de corriger les points remontés par l’audit de qualité de code et de performance. Cela dit, si le temps vous le permet, ToDo & Co sera ravi que vous réduisiez la dette technique de cette application."
+'Bug fixes': "Corrections d'anomalies"
+'A task must be attached to a user. Currently, when a task is created, it is not attached to a user. You are asked to make the necessary corrections so that automatically, when the task is saved, the authenticated user is attached to the newly created task. When editing the task, the author cannot be changed. For tasks already created, they must be attached to an "anonymous" user.':
+  "Une tâche doit être attachée à un utilisateur. Actuellement, lorsqu’une tâche est créée, elle n’est pas rattachée à un utilisateur. Il vous est demandé d’apporter les corrections nécessaires afin qu’automatiquement, à la sauvegarde de la tâche, l’utilisateur authentifié soit rattaché à la tâche nouvellement créée. Lors de la modification de la tâche, l’auteur ne peut pas être modifié. Pour les tâches déjà créées, il faut qu’elles soient rattachées à un utilisateur “anonyme”."
+'Choose a role for a user. When creating a user, it must be possible to choose a role for it. The roles listed are: user role (ROLE_USER) and administrator role (ROLE_ADMIN). When modifying a user, it is also possible to change the role of a user.':
+  "Choisir un rôle pour un utilisateur. Lors de la création d’un utilisateur, il doit être possible de choisir un rôle pour celui-ci. Les rôles listés sont les suivants : rôle utilisateur (ROLE_USER) et rôle administrateur (ROLE_ADMIN). Lors de la modification d’un utilisateur, il est également possible de changer le rôle d’un utilisateur."
+'New features implementation': 'Implémentation de nouvelles fonctionnalités'
+'Authorization. Only users with the administrator role (ROLE_ADMIN) should be able to access the user management pages. Tasks can only be deleted by the users who created the tasks in question. Tasks attached to the "anonymous" user can be deleted only by users with the administrator role (ROLE_ADMIN).':
+  "Autorisation. Seuls les utilisateurs ayant le rôle administrateur (ROLE_ADMIN) doivent pouvoir accéder aux pages de gestion des utilisateurs. Les tâches ne peuvent être supprimées que par les utilisateurs ayant créé les tâches en question. Les tâches rattachées à l’utilisateur \"anonyme\" peuvent être supprimées uniquement par les utilisateurs ayant le rôle administrateur (ROLE_ADMIN)."
+'Automated tests implementation. You are asked to implement the automated tests (unit and functional tests) necessary to ensure that the the application is in line with the demands. These tests must be implemented with PHPUnit. You can also use Behat for the functional part. You will provide test data in order to be able to prove the operation in the cases explained in this document. You are asked to provide a code coverage report at the end of the project. The coverage rate must be greater than 70%.':
+  "Implémentation de tests automatisés. Il vous est demandé d’implémenter les tests automatisés (tests unitaires et fonctionnels) nécessaires pour assurer que le fonctionnement de l’application est bien en adéquation avec les demandes. Ces tests doivent être implémentés avec PHPUnit. Vous pouvez aussi utiliser Behat pour la partie fonctionnelle. Vous prévoirez des données de tests afin de pouvoir prouver le fonctionnement dans les cas explicités dans ce document. Il vous est demandé de fournir un rapport de couverture de code au terme du projet. Il faut que le taux de couverture soit supérieur à 70 %"
+'You are required to produce documentation explaining how the authentication implementation was done. This documentation is intended for future junior developers who will join the team in a few weeks.':
+  "Il vous est demandé de produire une documentation expliquant comment l’implémentation de l'authentification a été faite. Cette documentation se destine aux prochains développeurs juniors qui rejoindront l’équipe dans quelques semaines."
+"In this documentation, it should be possible for a beginner with the Symfony framework to: understand which file(s) to modify and why, how the authentication is done and where the users are stored. If you think it's important to include other information, feel free to do so.":
+  "Dans cette documentation, il doit être possible pour un débutant avec le framework Symfony de : comprendre quel(s) fichier(s) il faut modifier et pourquoi, comment s’opère l’authentification et où sont stockés les utilisateurs. S’il vous semble important de mentionner d’autres informations, n’hésitez pas à le faire."
+'In addition, you are leading the way in terms of collaboration on this project. You are also asked to produce a document explaining how all developers wishing to make changes to the project should proceed. This document must also detail the quality process to be used as well as the rules to be observed.':
+  'Par ailleurs, vous ouvrez la marche en matière de collaboration à plusieurs sur ce projet. Il vous est également demandé de produire un document expliquant comment devront procéder tous les développeurs souhaitant apporter des modifications au projet. Ce document devra aussi détailler le processus de qualité à utiliser ainsi que les règles à respecter.'
+"The founders want to perpetuate the application development. However, they want first to dress a state of the art of the application's technical debt. At the end of your work on the application, you are asked to produce a code audit on the following two axes: code quality and performance.":
+  "Les fondateurs souhaitent pérenniser le développement de l’application. Cela dit, ils souhaitent dans un premier temps faire un état des lieux de la dette technique de l’application. Au terme de votre travail effectué sur l’application, il vous est demandé de produire un audit de code sur les deux axes suivants : la qualité de code et la performance."
+'Obviously, you are strongly advised to use tools that allow you to have metrics to back up your words. Regarding the performance audit, the use of Blackfire is mandatory. It will allow you to produce precise analyzes adapted to the future evolutions of the project.':
+  "Bien évidemment, il vous est fortement conseillé d’utiliser des outils vous permettant d’avoir des métriques pour appuyer vos propos. Concernant l’audit de performance, l’usage de Blackfire est obligatoire. Ce dernier vous permettra de produire des analyses précises et adaptées aux évolutions futures du projet."
+# Specific trans p7
+'The goal was for me to obtain additional skills as quickly as possible allowing me to develop locally on my computer in flexible and comfortable conditions without remaining dependent on it.':
+  "L'objectif était pour moi d'acquérir le plus rapidement possible des compétences annexes me permettant de développer en local sur mon ordinateur dans des conditions flexibles et confortables sans rester dépendant de ce dernier."
+'So I decided to learn how to use Docker to create stacks suited to my needs. This work was done with the help of my "Jedi Master"':
+  "J'ai donc décidé d'apprendre à utiliser Docker pour créer des stacks adaptées à mes besoins. Ce travail a été réalisé avec l'aide de mon \"Maître Jedi\""
+# Specific trans p8
+'The goal was to create a web service exposing an API.': "L'objectif était de créer un service web exposant une API."
+"BileMo is a company offering a variety of premium mobile phones. You are in charge to develop the BileMo company mobile phone showcase. BileMo's business model is not to sell its products directly on the website, but to provide all platforms that want it with access to the catalog via an API (Application Programming Interface).":
+  "BileMo est une entreprise offrant toute une sélection de téléphones mobiles haut de gamme. Vous êtes en charge du développement de la vitrine de téléphones mobiles de l’entreprise BileMo. Le business modèle de BileMo n’est pas de vendre directement ses produits sur le site web, mais de fournir à toutes les plateformes qui le souhaitent l’accès au catalogue via une API (Application Programming Interface)."
+'It is therefore exclusively B2B (business to business) sales. You will need to expose a number of APIs for applications on other web platforms to perform operations.':
+  "Il s’agit donc de vente exclusivement en B2B (business to business). Il va falloir que vous exposiez un certain nombre d’API pour que les applications des autres plateformes web puissent effectuer des opérations."
+'The first client has finally signed a partnership contract with BileMo! The fight starts to meet the needs of this first customer that will allow all the APIs to be put in place and tested right away. After a dense meeting with the client, a certain amount of information was identified.':
+  "Le premier client a enfin signé un contrat de partenariat avec BileMo ! C’est le branle-bas de combat pour répondre aux besoins de ce premier client qui va permettre de mettre en place l’ensemble des API et de les éprouver tout de suite. Après une réunion dense avec le client, il a été identifié un certain nombre d’informations."
+'It must be possible to: consult the list of BileMo products, consult the details of a BileMo product, consult the list of registered users linked to a client on the website, consult the details of a registered user linked to a client, add a new user linked to a customer and delete a user added by a customer.':
+  "Il doit être possible de : consulter la liste des produits BileMo, consulter les détails d’un produit BileMo, consulter la liste des utilisateurs inscrits liés à un client sur le site web, consulter le détail d’un utilisateur inscrit lié à un client, ajouter un nouvel utilisateur lié à un client et supprimer un utilisateur ajouté par un client."
+'Only referenced customers can access APIs. API clients must be authenticated through OAuth or JWT. You have the choice between setting up and using an OAuth server (using the FOSOAuthServerBundle), or using Facebook, Google or LinkedIn. If you decide to use JWT, you will need to check the token validity. The use of a library is permitted.' :
+  "Seuls les clients référencés peuvent accéder aux API. Les clients de l’API doivent être authentifiés via OAuth ou JWT. Vous avez le choix entre mettre en place un serveur OAuth et y faire appel (en utilisant le FOSOAuthServerBundle), et utiliser Facebook, Google ou LinkedIn. Si vous décidez d’utiliser JWT, il vous faudra vérifier la validité du token. L’usage d’une librairie est autorisé."
+"Data presentation: BileMo's first partner is very demanding. It requires that you expose your data following the rules in Levels 1, 2, and 3 of the Richardson model. He requested that you serve the data in JSON. If possible, the customer wants responses to be cached in order to optimize the performance of requests to the API.":
+  "Présentation des données : Le premier partenaire de BileMo est très exigeant. Il requiert que vous exposiez vos données en suivant les règles des niveaux 1, 2 et 3 du modèle de Richardson. Il a demandé à ce que vous serviez les données en JSON. Si possible, le client souhaite que les réponses soient mises en cache afin d’optimiser les performances des requêtes en direction de l’API."

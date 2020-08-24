@@ -1,0 +1,83 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Adrien PIERRARD - Express Food" %}
+
+{% block body %}
+
+    <!--================ Start portfolio Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>Express Food</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Portfolio Banner Area =================-->
+
+    <!--================ Start Portfolio Details Area =================-->
+    <section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="{{ asset('img/works/project3.png') }}" alt="Express Food">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio_right_text mt-30">
+                            <h4>{% trans %}Project{% endtrans %} : Express Food</h4>
+                            <p>
+                                {% trans %}This project takes part of my training course to become a PHP / Symfony Web Application Developer.{% endtrans %}
+                                {% trans %}The goal was to design the technical solution for an online catering application.{% endtrans %}
+                            </p>
+                            <ul class="list">
+                                <li><span>{% trans %}Period{% endtrans %}</span>: Jan. 2020</li>
+                                <li><span>{% trans %}Category{% endtrans %}</span>: {% trans %}OCR training project{% endtrans %}</li>
+                                <li><span>{% trans %}Skills{% endtrans %}</span>: MySQL</li>
+                                <li><span>{% trans %}Methodology{% endtrans %}</span>: {% trans %}UML software analysis{% endtrans %}</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="portfolio_right_btn col-xl-8 offset-xl-2 col-md-12 mt-25">
+                                <a href="{{ asset('download/Schemas_UML_Express_Food.pdf') }}"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See UML{% endtrans %}
+                                </a>
+                                <a href="{{ asset('download/project3_eval.pdf') }}"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See evaluation{% endtrans %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>{% trans %}Project expectations{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        The very young startup ExpressFood aims to deliver quality food at home in less than 20 minutes thanks to a network of bicycle delivery people. Every day, ExpressFood prepares 2 dishes and 2 desserts at its HQ in collaboration with experienced chefs. These dishes are cold packaged and then sent to home delivery people who then "maraud" the streets while awaiting delivery.
+                    {% endtrans %}
+                    {% trans %}
+                        As soon as a customer has ordered, one of the delivery people (who already has the dishes in a bag) is assigned to deliver in less than 20 minutes. On its application, ExpressFood offers its customers to order one or more dishes and desserts. Shipping costs are free. The dishes change every day. Once the order has been placed, the customer has access to a page indicating whether a delivery person has taken his order and the estimated time before delivery.
+                    {% endtrans %}<br>
+                    {% trans %}
+                        Thanks to UML, ExpressFood needs you to design its database. This involves storing in particular the list of customers, the different daily specials, delivery people with their status and position, orders placed, etc...
+                    {% endtrans %}<br>
+                    {% trans %}Deliverables requested are{% endtrans %} :<br>
+                    - {% trans %}Use case and sequence diagrams (order creation, adding dish of the day, order delivery){% endtrans %}<br>
+                    - {% trans %}Classes diagram{% endtrans %}<br>
+                    - {% trans %}The Physical Data Model - PDM{% endtrans %}<br>
+                    - {% trans %}The MySQL database containing a data demo set{% endtrans %}<br>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--================ Start Portfolio Details Area =================-->
+
+{% endblock %}

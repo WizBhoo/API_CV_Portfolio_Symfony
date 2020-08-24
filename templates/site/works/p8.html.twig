@@ -1,0 +1,101 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Adrien PIERRARD - BileMo" %}
+
+{% block body %}
+
+    <!--================ Start portfolio Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>BileMo</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Portfolio Banner Area =================-->
+
+    <!--================ Start Portfolio Details Area =================-->
+    <section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="{{ asset('img/works/project8.png') }}" alt="BileMo">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio_right_text mt-30">
+                            <h4>{% trans %}Project{% endtrans %} : BileMo</h4>
+                            <p>
+                                {% trans %}This project takes part of my training course to become a PHP / Symfony Web Application Developer.{% endtrans %}
+                                {% trans %}The goal was to create a web service exposing an API.{% endtrans %}
+                            </p>
+                            <ul class="list">
+                                <li><span>{% trans %}Period{% endtrans %}</span>: {% trans %}June{% endtrans %} 2020</li>
+                                <li><span>{% trans %}Category{% endtrans %}</span>: {% trans %}OCR training project{% endtrans %}</li>
+                                <li>
+                                    <span>{% trans %}Skills{% endtrans %}s</span>:
+                                    API REST /
+                                    <i class="fab fa-php"></i>
+                                </li>
+                                <li><span>Framework</span>: <i class="fab fa-symfony"></i> Symfony</li>
+                                <li><span>{% trans %}Methodology{% endtrans %}</span>: UML / Richardson Model</li>
+                                <li>
+                                    <span>Repository</span>:
+                                    <a href="https://github.com/WizBhoo/OCR_P07_BileMo" target="_blank">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="portfolio_right_btn col-xl-8 offset-xl-2 col-md-12 mt-25">
+                                <a href="https://bilemo.adrien-pierrard.fr"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See website{% endtrans %}
+                                </a>
+                                <a href="{{ asset('download/project8_eval.pdf') }}"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See evaluation{% endtrans %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>{% trans %}Context{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        BileMo is a company offering a variety of premium mobile phones. You are in charge to develop the BileMo company mobile phone showcase. BileMo's business model is not to sell its products directly on the website, but to provide all platforms that want it with access to the catalog via an API (Application Programming Interface).
+                    {% endtrans %}
+                    {% trans %}
+                        It is therefore exclusively B2B (business to business) sales. You will need to expose a number of APIs for applications on other web platforms to perform operations.
+                    {% endtrans %}
+                </p>
+                <h4>{% trans %}Project expectations{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        The first client has finally signed a partnership contract with BileMo! The fight starts to meet the needs of this first customer that will allow all the APIs to be put in place and tested right away. After a dense meeting with the client, a certain amount of information was identified.
+                    {% endtrans %}
+                    {% trans %}
+                        It must be possible to: consult the list of BileMo products, consult the details of a BileMo product, consult the list of registered users linked to a client on the website, consult the details of a registered user linked to a client, add a new user linked to a customer and delete a user added by a customer.
+                    {% endtrans %}
+                    {% trans %}
+                    Only referenced customers can access APIs. API clients must be authenticated through OAuth or JWT. You have the choice between setting up and using an OAuth server (using the FOSOAuthServerBundle), or using Facebook, Google or LinkedIn. If you decide to use JWT, you will need to check the token validity. The use of a library is permitted.
+                    {% endtrans %}<br>
+                    {% trans %}
+                        Data presentation: BileMo's first partner is very demanding. It requires that you expose your data following the rules in Levels 1, 2, and 3 of the Richardson model. He requested that you serve the data in JSON. If possible, the customer wants responses to be cached in order to optimize the performance of requests to the API.
+                    {% endtrans %}
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--================ Start Portfolio Details Area =================-->
+
+{% endblock %}

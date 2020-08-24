@@ -1,0 +1,132 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Adrien PIERRARD - Mon site CV" %}
+
+{% block body %}
+
+    <!--================ Start portfolio Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>Mon site CV &amp; Blog</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Portfolio Banner Area =================-->
+
+    <!--================ Start Portfolio Details Area =================-->
+    <section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="{{ asset('img/works/project5.png') }}" alt="Api - Site CV">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio_right_text mt-30">
+                            <h4>{% trans %}Project{% endtrans %} : {% trans %}Create my first PHP website{% endtrans %}</h4>
+                            <p>
+                                {% trans %}This project takes part of my training course to become a PHP / Symfony Web Application Developer.{% endtrans %}
+                                {% trans %}The goal was to create my first PHP website containing a blog.{% endtrans %}
+                            </p>
+                            <ul class="list">
+                                <li><span>{% trans %}Period{% endtrans %}n</span>: {% trans %}February{% endtrans %} / {% trans %}March{% endtrans %} 2020</li>
+                                <li><span>{% trans %}Category{% endtrans %}</span>: {% trans %}OCR training project{% endtrans %}</li>
+                                <li>
+                                    <span>{% trans %}Skills{% endtrans %}</span>:
+                                    <i class="fab fa-html5"></i> /
+                                    <i class="fab fa-css3"></i> /
+                                    MySQL /
+                                    <i class="fab fa-php"></i>
+                                </li>
+                                <li><span>{% trans %}Methodology{% endtrans %}</span>: UML / MVC / POO</li>
+                                <li>
+                                    <span>Repository</span>:
+                                    <a href="https://github.com/WizBhoo/OCR_P05_Site_CV-Blog" target="_blank">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="portfolio_right_btn col-xl-8 offset-xl-2 col-md-12 mt-25">
+                                <a href="https://adrien-pierrard.fr"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See website{% endtrans %}
+                                </a>
+                                <a href="{{ asset('download/project5_eval.pdf') }}"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See evaluation{% endtrans %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>{% trans %}Context{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        You need visibility to be able to convince your future employers / clients at a glance. You are a PHP developer, so now is the time to show your talents through a blog in your colors.
+                    {% endtrans %}
+                </p>
+                <h4>{% trans %}Project expectations{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                    The project is therefore to develop your professional blog. This website is divided into two main groups of pages: pages useful to all visitors and pages used to administer your blog.
+                    {% endtrans %}<br>
+                    {% trans %}Here is the pages list that must be accessible from your website{% endtrans %} :<br>
+                    - {% trans %}the homepage{% endtrans %}<br>
+                    - {% trans %}the page listing all the blog posts and the page displaying a blog post{% endtrans %}<br>
+                    - {% trans %}the pages allowing to add / modify / delete a blog post{% endtrans %}<br>
+                    - {% trans %}user login / registration pages{% endtrans %}<br>
+                    {% trans %}
+                        You will develop an administration part which must be accessible only to registered and validated users. The administration pages will therefore be accessible on conditions and you will ensure the security of the administration part.
+                    {% endtrans %}<br>
+                    {% trans %}
+                        On the home page, you must present the following information: name and first name, photo and / or logo, a catchphrase, a menu allowing you to navigate among all the pages of the site, a contact form by email functional, a link to your CV in PDF format and all the links to the social networks where you can be followed (GitHub, LinkedIn, Twitter, etc.).
+                    {% endtrans %}<br>
+                    {% trans %}
+                        On the page listing all the blog posts (from the most recent to the oldest), you must display the following information for each blog post: the title, the date of last modification, the chapter and a link to the blog post.
+                    {% endtrans %}<br>
+                    {% trans %}
+                        On the page presenting the details of a blog post, the following information must be displayed: the title, the resume, the content, the author, the date of the last update, the form allowing to add a comment (submitted for validation) and the lists of comments validated and published.
+                    {% endtrans %}<br>
+                    {% trans %}
+                        On the page to edit a blog post, the user has the possibility to modifythe title, resume, author and content fields.
+                    {% endtrans %}<br>
+                    {% trans %}In the footer menu, there should be a link to access the blog administration.{% endtrans %}
+                </p>
+                <h4>{% trans %}Constraints{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        This time, everything will be developed by you. The only lines of code that can come from elsewhere will be those of the Bootstrap theme, which you will be careful to choose. Presentation matters! It is also allowed to use one or more external libraries provided that they are integrated using Composer.
+                    {% endtrans %}
+                    {% trans %}
+                        The blog must be responsive (mobile phone, phablet, tablet…). On the administration part, you will ensure that only people with "administrator" right have access, other users can only comment on articles (with validation before publication). You will make sure that there are no security vulnerabilities (XSS, CSRF, SQL Injection, session hijacking, possible PHP script upload, etc.). Your project must be pushed and available on GitHub. It is advisable to work with pull requests.
+                    {% endtrans %}
+                    {% trans %}
+                        Since the majority of project communications on GitHub are in English, your commits must be in English. You will need to create all the issues (tickets) corresponding to the tasks you will have to perform to complete the project.
+                    {% endtrans %}
+                    {% trans %}
+                        Be sure to validate your tickets to make sure that they cover all the requests of the project. Give an indicative estimate in time or effort points (if you are familiar with the agile methodology) and try to keep this estimate. Writing these tickets will allow you to agree on a common vocabulary. It is highly appreciated that they are written in English!
+                    {% endtrans %}
+                </p>
+                <h4>Nota Bene</h4>
+                <p>
+                    {% trans %}
+                        Your project will have to be monitored via SymfonyInsight, or Codacy for the quality of the code. You will ensure you get a minimum silver medal (for SymfonyInsight). In addition, compliance with PSR is recommended in order to offer a code that is understandable and easily upgradeable.
+                    {% endtrans %}
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--================ Start Portfolio Details Area =================-->
+
+{% endblock %}

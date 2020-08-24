@@ -1,0 +1,122 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Adrien PIERRARD - SnowTricks" %}
+
+{% block body %}
+
+    <!--================ Start portfolio Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>SnowTricks</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Portfolio Banner Area =================-->
+
+    <!--================ Start Portfolio Details Area =================-->
+    <section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="{{ asset('img/works/project4.png') }}" alt="SnowTricks">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio_right_text mt-30">
+                            <h4>{% trans %}Project{% endtrans %} : SnowTricks</h4>
+                            <p>
+                                {% trans %}This project takes part of my training course to become a PHP / Symfony Web Application Developer.{% endtrans %}
+                                {% trans %}The goal was to develop the SnowTricks community website from A to Z using the Symfony Framework.{% endtrans %}
+                            </p>
+                            <ul class="list">
+                                <li><span>{% trans %}Period{% endtrans %}n</span>: {% trans %}April{% endtrans %} / {% trans %}May{% endtrans %} 2020</li>
+                                <li><span>{% trans %}Category{% endtrans %}</span>: {% trans %}OCR training project{% endtrans %}</li>
+                                <li>
+                                    <span>{% trans %}Skills{% endtrans %}</span>:
+                                    <i class="fab fa-html5"></i> /
+                                    <i class="fab fa-css3"></i> /
+                                    MySQL /
+                                    <i class="fab fa-php"></i>
+                                </li>
+                                <li><span>Framework</span>: <i class="fab fa-symfony"></i> Symfony</li>
+                                <li><span>{% trans %}Methodology{% endtrans %}</span>: UML / POO / SOLID</li>
+                                <li>
+                                    <span>Documents</span>:
+                                    <a href="{{ asset('download/Snowtricks_project_specification.pdf') }}" target="_blank">
+                                        <i class="fas fa-file-pdf"></i> Specifications
+                                    </a>
+                                    /
+                                    <a href="{{ asset('download/Snowtricks_Wireframes.pdf') }}" target="_blank">
+                                        <i class="fas fa-file-pdf"></i> Wireframes
+                                    </a>
+                                </li>
+                                <li>
+                                    <span>Repository</span>:
+                                    <a href="https://github.com/WizBhoo/OCR_P06_SnowTricks" target="_blank">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="portfolio_right_btn col-xl-8 offset-xl-2 col-md-12 mt-25">
+                                <a href="https://snowtricks.adrien-pierrard.fr"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See website{% endtrans %}
+                                </a>
+                                <a href="{{ asset('download/project4_eval.pdf') }}"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See evaluation{% endtrans %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>{% trans %}Project expectations{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        Jimmy Sweat is an ambitious snowboarding entrepreneur. Its objective is the creation of a collaborative website to promote this sport and to help tricks learning.
+                    {% endtrans %}
+                    {% trans %}
+                        He wants to capitalize on content provided by Internet users in order to develop rich content and arouse the interest of site users. Subsequently, Jimmy wants to develop a business of connecting with snowboard brands thanks to the traffic that the content will have generated.
+                    {% endtrans %}<br>
+                    {% trans %}For this project, we must focus on the website technical creation for Jimmy.{% endtrans %}<br>
+                    {% trans %}Being in charge to develop the website meeting Jimmy's needs, you must therefore implement the following features{% endtrans %} :<br>
+                    - {% trans %}A snowboard figures gallery. Just integrate 10 figures, the rest will be captured by Internet users.{% endtrans %}<br>
+                    - {% trans %}Figures management (creation, modification, consultation).{% endtrans %}<br>
+                    - {% trans %}A space for discussion common to all the figures.{% endtrans %}<br><br>
+                    {% trans %}To implement these features, you must create the following pages{% endtrans %} :<br>
+                    - {% trans %}The homepage where the figures list will appear{% endtrans %}<br>
+                    - {% trans %}The page to create a new figure{% endtrans %}<br>
+                    - {% trans %}The page to edit a figure{% endtrans %}<br>
+                    - {% trans %}The presentation page of a figure (containing the common discussion area around a figure).{% endtrans %}<br>
+                    {% trans %}All detailed specifications for the pages to be developed are provided.{% endtrans %}<br>
+                </p>
+                <h4>Nota Bene</h4>
+                <p>
+                    {% trans %}
+                        It is necessary that the page URLs allow a quick understanding of what the page represents and that SEO is facilitated. The use of third-party bundles is prohibited except for initial data. It is necessary to rely mainly on official documentation in order to fulfill the given objectives.
+                    {% endtrans %}
+                    {% trans %}
+                        The website design is completely free, however be careful to respect the wireframes provided for the page template. The site will have to be Responsive Design.
+                    {% endtrans %}
+                    {% trans %}
+                        First, you will have to write all the issues / tickets in order to break down the work methodically to ensure that the entire customer need is well understood. The tickets / issues will be written in a GitHub repository created beforehand. All snowboard tricks must be present when the web application is initialized.
+                    {% endtrans %}
+                    {% trans %}You will use an external bundle to load this data.{% endtrans %}
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--================ Start Portfolio Details Area =================-->
+
+{% endblock %}

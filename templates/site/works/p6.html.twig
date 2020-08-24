@@ -1,0 +1,127 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Adrien PIERRARD - ToDo &amp; Co" %}
+
+{% block body %}
+
+    <!--================ Start portfolio Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>ToDo &amp; Co</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_portfolio') }}">{% trans %}Portfolio{% endtrans %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Portfolio Banner Area =================-->
+
+    <!--================ Start Portfolio Details Area =================-->
+    <section class="portfolio_details_area section_gap">
+        <div class="container">
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="{{ asset('img/works/project6.png') }}" alt="ToDo &amp; Co">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio_right_text mt-30">
+                            <h4>{% trans %}Project{% endtrans %} : ToDo &amp; Co</h4>
+                            <p>
+                                {% trans %}This project takes part of my training course to become a PHP / Symfony Web Application Developer.{% endtrans %}
+                                {% trans %}The goal was to improve an existing application of ToDo &amp; Co.{% endtrans %}
+                            </p>
+                            <ul class="list">
+                                <li><span>{% trans %}Period{% endtrans %}</span>: {% trans %}June{% endtrans %} / {% trans %}July{% endtrans %} 2020</li>
+                                <li><span>{% trans %}Category{% endtrans %}</span>: {% trans %}OCR training project{% endtrans %}</li>
+                                <li><span>{% trans %}Skills{% endtrans %}</span>: <i class="fab fa-php"></i></li>
+                                <li><span>Framework</span>: <i class="fab fa-symfony"></i> Symfony</li>
+                                <li><span>{% trans %}Methodology{% endtrans %}</span>: TDD</li>
+                                <li><span>Testing</span>: IC / PHPUnit / Blackfire</li>
+                                <li>
+                                    <span>Documents</span>:
+                                    <a href="{{ asset('download/ToDo_and_Co_Audit_report.pdf') }}" target="_blank">
+                                        <i class="fas fa-file-pdf"></i> {% trans %}Quality &amp; Performance Audit{% endtrans %}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="portfolio_right_btn col-xl-8 offset-xl-2 col-md-12 mt-25">
+                                <a href="https://github.com/WizBhoo/OCR_P08_ToDoList"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See{% endtrans %} <i class="fab fa-github"></i>
+                                </a>
+                                <a href="{{ asset('download/project6_eval.pdf') }}"
+                                   class="primary-btn" target="_blank">
+                                    {% trans %}See evaluation{% endtrans %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>{% trans %}Context{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        You have just joined a startup whose core business is an application to manage its daily tasks. The company has just been set up, and the application had to be developed at full speed to allow potential investors to be shown that the concept is viable (known as Minimum Viable Product or MVP). The choice of the previous developer was to use the PHP Symfony framework.
+                    {% endtrans %}
+                    {% trans %}
+                        Good news ! ToDo & Co has finally succeeded in raising funds to allow the development of the company and especially the application. Your role here is therefore to improve the quality of the application. Quality is a concept that encompasses many subjects: we often talk about code quality, but there is also the quality perceived by the user of the application or the quality perceived by the company's employees, and and finally the quality you perceive when you have to work on the project.
+                    {% endtrans %}
+                    {% trans %}
+                        So, for this specialization project, you are in the shoes of an experienced developer in charge of the following tasks: new features implementation, the correction of some anomalies, and the automated tests implementation.
+                    {% endtrans %}<br>
+                    {% trans %}
+                        You are also in charge to analyze the project using tools that allow you to have an overview of the code quality and the different areas of the application performance. You are not asked to correct the points raised by the code quality and performance audit. That said, if time allows, ToDo & Co will be happy to have you reduce the technical debt of this app.
+                    {% endtrans %}
+                </p>
+                <h4>{% trans %}Project expectations{% endtrans %}</h4>
+                <p>
+                    {% trans %}Bug fixes{% endtrans %} : <br>
+                    - {% trans %}
+                        A task must be attached to a user. Currently, when a task is created, it is not attached to a user. You are asked to make the necessary corrections so that automatically, when the task is saved, the authenticated user is attached to the newly created task. When editing the task, the author cannot be changed. For tasks already created, they must be attached to an "anonymous" user.
+                    {% endtrans %}<br>
+                    - {% trans %}
+                        Choose a role for a user. When creating a user, it must be possible to choose a role for it. The roles listed are: user role (ROLE_USER) and administrator role (ROLE_ADMIN). When modifying a user, it is also possible to change the role of a user.
+                    {% endtrans %}<br><br>
+                    {% trans %}New features implementation{% endtrans %} :<br>
+                    - {% trans %}
+                    Authorization. Only users with the administrator role (ROLE_ADMIN) should be able to access the user management pages. Tasks can only be deleted by the users who created the tasks in question. Tasks attached to the "anonymous" user can be deleted only by users with the administrator role (ROLE_ADMIN).
+                    {% endtrans %}<br>
+                    - {% trans %}
+                        Automated tests implementation. You are asked to implement the automated tests (unit and functional tests) necessary to ensure that the the application is in line with the demands. These tests must be implemented with PHPUnit. You can also use Behat for the functional part. You will provide test data in order to be able to prove the operation in the cases explained in this document. You are asked to provide a code coverage report at the end of the project. The coverage rate must be greater than 70%.
+                    {% endtrans %}
+                </p>
+                <h4>{% trans %}Technical documentation{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        You are required to produce documentation explaining how the authentication implementation was done. This documentation is intended for future junior developers who will join the team in a few weeks.
+                    {% endtrans %}
+                    {% trans %}
+                        In this documentation, it should be possible for a beginner with the Symfony framework to: understand which file(s) to modify and why, how the authentication is done and where the users are stored. If you think it's important to include other information, feel free to do so.
+                    {% endtrans %}
+                    {% trans %}
+                        In addition, you are leading the way in terms of collaboration on this project. You are also asked to produce a document explaining how all developers wishing to make changes to the project should proceed. This document must also detail the quality process to be used as well as the rules to be observed.
+                    {% endtrans %}
+                </p>
+                <h4>{% trans %}Quality &amp; Performance Audit{% endtrans %}</h4>
+                <p>
+                    {% trans %}
+                        The founders want to perpetuate the application development. However, they want first to dress a state of the art of the application's technical debt. At the end of your work on the application, you are asked to produce a code audit on the following two axes: code quality and performance.
+                    {% endtrans %}
+                    {% trans %}
+                        Obviously, you are strongly advised to use tools that allow you to have metrics to back up your words. Regarding the performance audit, the use of Blackfire is mandatory. It will allow you to produce precise analyzes adapted to the future evolutions of the project.
+                    {% endtrans %}
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--================ Start Portfolio Details Area =================-->
+
+{% endblock %}
