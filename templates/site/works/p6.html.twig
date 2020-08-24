@@ -67,71 +67,57 @@
                     </div>
                 </div>
                 <h4>{% trans %}Context{% endtrans %}</h4>
-                <p>Vous venez d’intégrer une startup dont le cœur de métier est une application permettant de gérer ses
-                    tâches quotidiennes. L’entreprise vient tout juste d’être montée, et l’application a dû être
-                    développée à toute vitesse pour permettre de montrer à de potentiels investisseurs que le concept
-                    est viable (on parle de Minimum Viable Product ou MVP). Le choix du développeur précédent a été
-                    d’utiliser le framework PHP Symfony. Bonne nouvelle ! ToDo & Co a enfin réussi à lever des fonds
-                    pour permettre le développement de l’entreprise et surtout de l’application. Votre rôle ici est
-                    donc d’améliorer la qualité de l’application. La qualité est un concept qui englobe bon nombre
-                    de sujets : on parle souvent de qualité de code, mais il y a également la qualité perçue par
-                    l’utilisateur de l’application ou encore la qualité perçue par les collaborateurs de l’entreprise,
-                    et enfin la qualité que vous percevez lorsqu’il vous faut travailler sur le projet.
-                    Ainsi, pour ce projet de spécialisation, vous êtes dans la peau d’un développeur expérimenté
-                    en charge des tâches suivantes : l’implémentation de nouvelles fonctionnalités, la correction de
-                    quelques anomalies, et l’implémentation de tests automatisés.<br>
-                    Il vous est également demandé d’analyser le projet grâce à des outils vous permettant d’avoir
-                    une vision d’ensemble de la qualité du code et des différents axes de performance de l’application.
-                    Il ne vous est pas demandé de corriger les points remontés par l’audit de qualité de code et de
-                    performance. Cela dit, si le temps vous le permet, ToDo & Co sera ravi que vous réduisiez la
-                    dette technique de cette application.
+                <p>
+                    {% trans %}
+                        You have just joined a startup whose core business is an application to manage its daily tasks. The company has just been set up, and the application had to be developed at full speed to allow potential investors to be shown that the concept is viable (known as Minimum Viable Product or MVP). The choice of the previous developer was to use the PHP Symfony framework.
+                    {% endtrans %}
+                    {% trans %}
+                        Good news ! ToDo & Co has finally succeeded in raising funds to allow the development of the company and especially the application. Your role here is therefore to improve the quality of the application. Quality is a concept that encompasses many subjects: we often talk about code quality, but there is also the quality perceived by the user of the application or the quality perceived by the company's employees, and and finally the quality you perceive when you have to work on the project.
+                    {% endtrans %}
+                    {% trans %}
+                        So, for this specialization project, you are in the shoes of an experienced developer in charge of the following tasks: new features implementation, the correction of some anomalies, and the automated tests implementation.
+                    {% endtrans %}<br>
+                    {% trans %}
+                        You are also in charge to analyze the project using tools that allow you to have an overview of the code quality and the different areas of the application performance. You are not asked to correct the points raised by the code quality and performance audit. That said, if time allows, ToDo & Co will be happy to have you reduce the technical debt of this app.
+                    {% endtrans %}
                 </p>
                 <h4>{% trans %}Project expectations{% endtrans %}</h4>
-                <p>Corrections d'anomalies : <br>
-                    - Une tâche doit être attachée à un utilisateur. Actuellement, lorsqu’une tâche est créée,
-                    elle n’est pas rattachée à un utilisateur. Il vous est demandé d’apporter les corrections
-                    nécessaires afin qu’automatiquement, à la sauvegarde de la tâche, l’utilisateur authentifié soit
-                    rattaché à la tâche nouvellement créée. Lors de la modification de la tâche, l’auteur ne peut pas
-                    être modifié. Pour les tâches déjà créées, il faut qu’elles soient rattachées à un utilisateur
-                    “anonyme”.<br>
-                    - Choisir un rôle pour un utilisateur. Lors de la création d’un utilisateur, il doit être possible
-                    de choisir un rôle pour celui-ci. Les rôles listés sont les suivants : rôle utilisateur (ROLE_USER)
-                    et rôle administrateur (ROLE_ADMIN). Lors de la modification d’un utilisateur, il est également
-                    possible de changer le rôle d’un utilisateur.<br><br>
-
-                    Implémentation de nouvelles fonctionnalités :<br>
-                    - Autorisation. Seuls les utilisateurs ayant le rôle administrateur (ROLE_ADMIN) doivent pouvoir
-                    accéder aux pages de gestion des utilisateurs. Les tâches ne peuvent être supprimées que par les
-                    utilisateurs ayant créé les tâches en question. Les tâches rattachées à l’utilisateur “anonyme”
-                    peuvent être supprimées uniquement par les utilisateurs ayant le rôle administrateur (ROLE_ADMIN).<br>
-                    - Implémentation de tests automatisés. Il vous est demandé d’implémenter les tests automatisés
-                    (tests unitaires et fonctionnels) nécessaires pour assurer que le fonctionnement de l’application
-                    est bien en adéquation avec les demandes. Ces tests doivent être implémentés avec PHPUnit. Vous
-                    pouvez aussi utiliser Behat pour la partie fonctionnelle. Vous prévoirez des données de tests
-                    afin de pouvoir prouver le fonctionnement dans les cas explicités dans ce document. Il vous est
-                    demandé de fournir un rapport de couverture de code au terme du projet.
-                    Il faut que le taux de couverture soit supérieur à 70 %.
+                <p>
+                    {% trans %}Bug fixes{% endtrans %} : <br>
+                    - {% trans %}
+                        A task must be attached to a user. Currently, when a task is created, it is not attached to a user. You are asked to make the necessary corrections so that automatically, when the task is saved, the authenticated user is attached to the newly created task. When editing the task, the author cannot be changed. For tasks already created, they must be attached to an "anonymous" user.
+                    {% endtrans %}<br>
+                    - {% trans %}
+                        Choose a role for a user. When creating a user, it must be possible to choose a role for it. The roles listed are: user role (ROLE_USER) and administrator role (ROLE_ADMIN). When modifying a user, it is also possible to change the role of a user.
+                    {% endtrans %}<br><br>
+                    {% trans %}New features implementation{% endtrans %} :<br>
+                    - {% trans %}
+                    Authorization. Only users with the administrator role (ROLE_ADMIN) should be able to access the user management pages. Tasks can only be deleted by the users who created the tasks in question. Tasks attached to the "anonymous" user can be deleted only by users with the administrator role (ROLE_ADMIN).
+                    {% endtrans %}<br>
+                    - {% trans %}
+                        Automated tests implementation. You are asked to implement the automated tests (unit and functional tests) necessary to ensure that the the application is in line with the demands. These tests must be implemented with PHPUnit. You can also use Behat for the functional part. You will provide test data in order to be able to prove the operation in the cases explained in this document. You are asked to provide a code coverage report at the end of the project. The coverage rate must be greater than 70%.
+                    {% endtrans %}
                 </p>
                 <h4>{% trans %}Technical documentation{% endtrans %}</h4>
-                <p>Il vous est demandé de produire une documentation expliquant comment l’implémentation de
-                    l'authentification a été faite. Cette documentation se destine aux prochains développeurs juniors
-                    qui rejoindront l’équipe dans quelques semaines. Dans cette documentation, il doit être possible
-                    pour un débutant avec le framework Symfony de : comprendre quel(s) fichier(s) il faut modifier et
-                    pourquoi, comment s’opère l’authentification et où sont stockés les utilisateurs. S’il vous semble
-                    important de mentionner d’autres informations, n’hésitez pas à le faire. Par ailleurs, vous ouvrez
-                    la marche en matière de collaboration à plusieurs sur ce projet. Il vous est également demandé de
-                    produire un document expliquant comment devront procéder tous les développeurs souhaitant apporter
-                    des modifications au projet. Ce document devra aussi détailler le processus de qualité à utiliser
-                    ainsi que les règles à respecter.
+                <p>
+                    {% trans %}
+                        You are required to produce documentation explaining how the authentication implementation was done. This documentation is intended for future junior developers who will join the team in a few weeks.
+                    {% endtrans %}
+                    {% trans %}
+                        In this documentation, it should be possible for a beginner with the Symfony framework to: understand which file(s) to modify and why, how the authentication is done and where the users are stored. If you think it's important to include other information, feel free to do so.
+                    {% endtrans %}
+                    {% trans %}
+                        In addition, you are leading the way in terms of collaboration on this project. You are also asked to produce a document explaining how all developers wishing to make changes to the project should proceed. This document must also detail the quality process to be used as well as the rules to be observed.
+                    {% endtrans %}
                 </p>
                 <h4>{% trans %}Quality &amp; Performance Audit{% endtrans %}</h4>
-                <p>Les fondateurs souhaitent pérenniser le développement de l’application. Cela dit, ils souhaitent
-                    dans un premier temps faire un état des lieux de la dette technique de l’application. Au terme de
-                    votre travail effectué sur l’application, il vous est demandé de produire un audit de code sur les
-                    deux axes suivants : la qualité de code et la performance. Bien évidemment, il vous est fortement
-                    conseillé d’utiliser des outils vous permettant d’avoir des métriques pour appuyer vos propos.
-                    Concernant l’audit de performance, l’usage de Blackfire est obligatoire. Ce dernier vous permettra
-                    de produire des analyses précises et adaptées aux évolutions futures du projet.
+                <p>
+                    {% trans %}
+                        The founders want to perpetuate the application development. However, they want first to dress a state of the art of the application's technical debt. At the end of your work on the application, you are asked to produce a code audit on the following two axes: code quality and performance.
+                    {% endtrans %}
+                    {% trans %}
+                        Obviously, you are strongly advised to use tools that allow you to have metrics to back up your words. Regarding the performance audit, the use of Blackfire is mandatory. It will allow you to produce precise analyzes adapted to the future evolutions of the project.
+                    {% endtrans %}
                 </p>
             </div>
         </div>

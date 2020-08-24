@@ -70,31 +70,28 @@
                     </div>
                 </div>
                 <h4>{% trans %}Context{% endtrans %}</h4>
-                <p>BileMo est une entreprise offrant toute une sélection de téléphones mobiles haut de gamme. Vous
-                    êtes en charge du développement de la vitrine de téléphones mobiles de l’entreprise BileMo.
-                    Le business modèle de BileMo n’est pas de vendre directement ses produits sur le site web, mais
-                    de fournir à toutes les plateformes qui le souhaitent l’accès au catalogue via une API
-                    (Application Programming Interface). Il s’agit donc de vente exclusivement en B2B
-                    (business to business). Il va falloir que vous exposiez un certain nombre d’API pour que les
-                    applications des autres plateformes web puissent effectuer des opérations.
-                    </p>
+                <p>
+                    {% trans %}
+                        BileMo is a company offering a variety of premium mobile phones. You are in charge to develop the BileMo company mobile phone showcase. BileMo's business model is not to sell its products directly on the website, but to provide all platforms that want it with access to the catalog via an API (Application Programming Interface).
+                    {% endtrans %}
+                    {% trans %}
+                        It is therefore exclusively B2B (business to business) sales. You will need to expose a number of APIs for applications on other web platforms to perform operations.
+                    {% endtrans %}
+                </p>
                 <h4>{% trans %}Project expectations{% endtrans %}</h4>
-                <p>Le premier client a enfin signé un contrat de partenariat avec BileMo ! C’est le branle-bas de
-                    combat pour répondre aux besoins de ce premier client qui va permettre de mettre en place
-                    l’ensemble des API et de les éprouver tout de suite. Après une réunion dense avec le client, il a
-                    été identifié un certain nombre d’informations. Il doit être possible de : consulter la liste des
-                    produits BileMo, consulter les détails d’un produit BileMo, consulter la liste des utilisateurs
-                    inscrits liés à un client sur le site web, consulter le détail d’un utilisateur inscrit lié à
-                    un client, ajouter un nouvel utilisateur lié à un client et supprimer un utilisateur ajouté
-                    par un client. Seuls les clients référencés peuvent accéder aux API. Les clients de l’API
-                    doivent être authentifiés via OAuth ou JWT. Vous avez le choix entre mettre en place un serveur
-                    OAuth et y faire appel (en utilisant le FOSOAuthServerBundle), et utiliser Facebook, Google ou
-                    LinkedIn. Si vous décidez d’utiliser JWT, il vous faudra vérifier la validité du token. L’usage
-                    d’une librairie est autorisé.<br>
-                    Présentation des données : Le premier partenaire de BileMo est très exigeant. Il requiert que
-                    vous exposiez vos données en suivant les règles des niveaux 1, 2 et 3 du modèle de Richardson.
-                    Il a demandé à ce que vous serviez les données en JSON. Si possible, le client souhaite que les
-                    réponses soient mises en cache afin d’optimiser les performances des requêtes en direction de l’API.
+                <p>
+                    {% trans %}
+                        The first client has finally signed a partnership contract with BileMo! The fight starts to meet the needs of this first customer that will allow all the APIs to be put in place and tested right away. After a dense meeting with the client, a certain amount of information was identified.
+                    {% endtrans %}
+                    {% trans %}
+                        It must be possible to: consult the list of BileMo products, consult the details of a BileMo product, consult the list of registered users linked to a client on the website, consult the details of a registered user linked to a client, add a new user linked to a customer and delete a user added by a customer.
+                    {% endtrans %}
+                    {% trans %}
+                    Only referenced customers can access APIs. API clients must be authenticated through OAuth or JWT. You have the choice between setting up and using an OAuth server (using the FOSOAuthServerBundle), or using Facebook, Google or LinkedIn. If you decide to use JWT, you will need to check the token validity. The use of a library is permitted.
+                    {% endtrans %}<br>
+                    {% trans %}
+                        Data presentation: BileMo's first partner is very demanding. It requires that you expose your data following the rules in Levels 1, 2, and 3 of the Richardson model. He requested that you serve the data in JSON. If possible, the customer wants responses to be cached in order to optimize the performance of requests to the API.
+                    {% endtrans %}
                 </p>
             </div>
         </div>
