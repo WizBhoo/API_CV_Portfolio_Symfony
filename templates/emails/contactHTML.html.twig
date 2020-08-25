@@ -1,11 +1,18 @@
-<h1>Une personne vous a contacté :</h1>
+<!DOCTYPE html>
+<html lang="fr_FR">
 
-<ul>
-    <li>Nom : {{ contact.firstname }} {{ contact.lastname }}</li>
-    <li>Email : {{ contact.email }}</li>
-    <li>Sujet : {{ contact.subject }}</li>
-    <li>
-        Message :<br>
-        {{ contact.message | nl2br }}
-    </li>
-</ul>
+<body>
+    <h1>Une personne vous a contacté :</h1>
+
+    <ul>
+        <li>Nom : {{ contact.firstname }} {{ contact.lastname }}</li>
+        <li>Email : {{ contact.email }}</li>
+        <li>Sujet : {{ contact.subject }}</li>
+        <li>
+            Message :<br>
+            {{ contact.message | nl2br }}
+        </li>
+    </ul>
+</body>
+
+</html>

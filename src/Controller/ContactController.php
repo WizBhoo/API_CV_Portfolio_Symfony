@@ -6,9 +6,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Contact;
 use App\Form\ContactType;
-use App\Mailer\MailerMessage;
+use App\Manager\ContactManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,21 +21,20 @@ class ContactController extends AbstractController
     /**
      * Show contact page with contact form.
      *
-     * @param Request       $request
-     * @param MailerMessage $mailer
+     * @param Request $request
+     * @param ContactManager $contactManager
      *
      * @return Response
      *
      * @throws TransportExceptionInterface
      */
-    public function contact(Request $request, MailerMessage $mailer): Response
+    public function contact(Request $request, ContactManager $contactManager): Response
     {
-        $contact = new Contact();
-        $form = $this->createForm(ContactType::class, $contact);
+        $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $mailer->sendContactEmail($contact);
+            $contactManager->sendContactEmail($form->getData());
             $this->addFlash(
                 'success',
                 'Your message has been sent !'
