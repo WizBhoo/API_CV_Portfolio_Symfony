@@ -56,15 +56,20 @@
                         {{ form_row(form.subject) }}
                         {{ form_row(form.message) }}
                     </div>
-                    {% for messages in app.flashes(['success']) %}
-                        {% for message in messages %}
-                            <div class="col-lg-5 col-md-6 offset-lg-7 offset-md-6 text-center">
-                                <div class="alert-success">
-                                    {{ message|trans(messages, 'messages') }}
-                                </div>
+                    {% for message in app.flashes('success') %}
+                        <div class="col-lg-5 col-md-6 offset-lg-7 offset-md-6 text-center">
+                            <div class="alert-success">
+                                {{ message|trans() }}
                             </div>
-                        {% endfor %}
+                        </div>
                     {% endfor %}
+                    {% if not form.vars.valid %}
+                        <div class="col-lg-5 col-md-6 offset-lg-7 offset-md-6 text-center">
+                            <div class="alert-danger">
+                                {% trans %}Error please try again !{% endtrans %}
+                            </div>
+                        </div>
+                    {% endif %}
                     <div class="form-group col-md-12 text-right">
                         <button class="primary-btn">Envoyer</button>
                     </div>
