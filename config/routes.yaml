@@ -12,3 +12,8 @@ app_project_show:
   path: /portfolio/{project}
   controller: App\Controller\PortfolioController::show
   methods: GET
+
+app_contact:
+  path: /contact
+  controller: App\Controller\ContactController::contact
+  methods: GET|POST

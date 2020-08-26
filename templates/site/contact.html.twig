@@ -1,0 +1,83 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Adrien PIERRARD - Contact" %}
+
+{% block body %}
+
+    <!--================ Start Contact Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>{% trans %}Contact Me{% endtrans %}</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_contact') }}">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Contact Banner Area =================-->
+
+    <!--================Contact Area =================-->
+    <section class="contact_area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="contact_info">
+                        <div class="info_item">
+                            <i class="lnr lnr-home"></i>
+                            <h6>Rhône, FRANCE</h6>
+                            <p>32 Rue Crépet - 69007 Lyon</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-phone-handset"></i>
+                            <h6>+33 (6) 85 21 60 46</h6>
+                            <p>{% trans %}Please leave a message with your details{% endtrans %} ;-)</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-envelope"></i>
+                            <h6>{% trans %}Use the form to contact me{% endtrans %}</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="main-title">
+                        <h1>{% trans %}Contact form{% endtrans %}</h1>
+                    </div>
+                    {{ form_start(form, {'attr': {'class': 'row contact_form'}}) }}
+                    <div class="col-md-5 offset-md-1">
+                        {{ form_row(form.lastname) }}
+                        {{ form_row(form.firstname) }}
+                        {{ form_row(form.email) }}
+                    </div>
+                    <div class="col-lg-5 col-md-6 offset-lg-1">
+                        {{ form_row(form.subject) }}
+                        {{ form_row(form.message) }}
+                    </div>
+                    {% for message in app.flashes('success') %}
+                        <div class="col-lg-5 col-md-6 offset-lg-7 offset-md-6 text-center">
+                            <div class="alert-success">
+                                {{ message|trans() }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {% if not form.vars.valid %}
+                        <div class="col-lg-5 col-md-6 offset-lg-7 offset-md-6 text-center">
+                            <div class="alert-danger">
+                                {% trans %}Error please try again !{% endtrans %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="form-group col-md-12 text-right">
+                        <button class="primary-btn">{% trans %}Send{% endtrans %}</button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Contact Area =================-->
+
+{% endblock %}
