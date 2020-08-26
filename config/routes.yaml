@@ -17,3 +17,8 @@ app_contact:
   path: /contact
   controller: App\Controller\ContactController::contact
   methods: GET|POST
+
+app_admin_dashboard:
+  path: /apiadmin/dashboard
+  controller: App\Controller\AdminController::dashboard
+  methods: GET

@@ -1,0 +1,60 @@
+<aside class="menu-sidebar2">
+    <div class="logo">
+        <a href="{{ path('app_admin_dashboard') }}">
+            <img src="{{ asset('img/logoadmin.png') }}" alt="APi" />
+        </a>
+    </div>
+    <div class="menu-sidebar2__content js-scrollbar1">
+        <div class="account2">
+            <div class="image img-cir img-120">
+                <img src="{{ asset('img/avatar_api.png') }}" alt="Adrien PIERRARD" />
+            </div>
+            <h4 class="name">Add Current Username</h4>
+            <a class="sign-out" id="sign-out" href="">Sign out</a>
+        </div>
+        <nav class="navbar-sidebar2">
+            <ul class="list-unstyled navbar__list">
+                <li class="has-sub">
+                    <a class="js-arrow" href="#">
+                        <i class="fas fa-tachometer-alt"></i>Blog
+                        <span class="arrow">
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        <li>
+                            <a href="">
+                                <i class="fas fa-copy"></i>Articles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-comments"></i>Comments
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a class="js-arrow" href="#">
+                        <i class="fas fa-user"></i>Users
+                        <span class="arrow">
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        <li>
+                            <a href="">
+                                <i class="fas fa-user"></i>My Account
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-unlock-alt"></i>Admin Account
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>
