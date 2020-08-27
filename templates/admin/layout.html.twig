@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr_FR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="dashboard theme template">
+    <meta name="author" content="Hau Nguyen adapted for personal use by WizBhoo">
+
+    <!-- Title Page -->
+    <link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/png">
+    <title>{% block title "APi Admin Dashboard" %}</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <!-- Material Design Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+    <!-- libs CSS -->
+    <link rel="stylesheet" href="{{ asset('libs/dashboard/animsition/animsition.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('libs/dashboard/wow/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('libs/dashboard/slick/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('libs/dashboard/perfect-scrollbar/perfect-scrollbar.css') }}">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ asset('css/adminStyle.css') }}">
+</head>
+
+<body class="animsition">
+
+<div class="page-wrapper">
+    <!-- MENU SIDEBAR -->
+
+    {% include('admin_block/sidebar1.html.twig') %}
+
+    <!-- END MENU SIDEBAR -->
+
+    <!-- PAGE CONTAINER -->
+    <div class="page-container2">
+        <!-- HEADER DESKTOP -->
+
+        {% include('admin_block/header.html.twig') %}
+
+        {% include('admin_block/sidebar2.html.twig') %}
+
+        <!-- END HEADER DESKTOP-->
+        <div class="main-content">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    {% for message in app.flashes('success') %}
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 text-center">
+                                <div class="au-alert-success">
+                                    {{ message|trans() }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {% for message in app.flashes('error') %}
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="au-alert-danger">
+                                    {{ message|trans() }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER AREA -->
+
+        {% include('admin_block/footer.html.twig') %}
+
+        <!-- END FOOTER AREA -->
+    </div>
+    <!-- END PAGE CONTAINER-->
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous">
+</script>
+<!-- Font-Awesome cdn js -->
+<script src="https://kit.fontawesome.com/58f30e32b1.js" crossorigin="anonymous"></script>
+<!-- libs JS -->
+<script src="{{ asset('libs/dashboard/slick/slick.min.js') }}"></script>
+<script src="{{ asset('libs/dashboard/wow/wow.min.js') }}"></script>
+<script src="{{ asset('libs/dashboard/animsition/animsition.min.js') }}"></script>
+<script src="{{ asset('libs/dashboard/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+
+<!-- Main JS-->
+<script src="{{ asset('js/dashboard/main.js') }}"></script>
+
+</body>
+
+</html>
+<!-- end document-->
