@@ -17,3 +17,8 @@ app_contact:
   path: /contact
   controller: App\Controller\ContactController::contact
   methods: GET|POST
+
+app_register:
+  path: /register
+  controller: App\Controller\UserController::register
+  methods: GET

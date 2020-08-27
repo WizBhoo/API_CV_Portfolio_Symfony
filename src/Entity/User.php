@@ -16,9 +16,9 @@ use Symfony\Component\Validator\Constraints as Assert;
  * Entity Class User.
  *
  * @ORM\Table("user")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  *
- * @UniqueEntity(fields={"email"}, message="This email already exists")
+ * @UniqueEntity(fields={"email"}, message="This email already exists", groups={"registration"})
  */
 class User implements UserInterface
 {
@@ -36,13 +36,14 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=30, unique=true)
      *
-     * @Assert\NotBlank(message="You must choose a Username")
+     * @Assert\NotBlank(message="You must choose a username", groups={"registration"})
      * @Assert\Length(
      *     min=3,
      *     max=30,
      *     minMessage="Your username should contain at least {{ limit }} characters",
      *     maxMessage="Your username should not contain more than {{ limit }} characters",
-     *     allowEmptyString=false
+     *     allowEmptyString=false,
+     *     groups={"registration"}
      * )
      */
     private $username;
@@ -52,13 +53,14 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=30)
      *
-     * @Assert\NotBlank(message="You must choose a lastname")
+     * @Assert\NotBlank(message="You must choose a lastname", groups={"registration"})
      * @Assert\Length(
      *     min=4,
      *     max=30,
      *     minMessage="Your lastname should contain at least {{ limit }} characters",
      *     maxMessage="Your lastname should not contain more than {{ limit }} characters",
-     *     allowEmptyString=false
+     *     allowEmptyString=false,
+     *     groups={"registration"}
      * )
      */
     private $lastname;
@@ -68,13 +70,14 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=30)
      *
-     * @Assert\NotBlank(message="You must choose a firstname")
+     * @Assert\NotBlank(message="You must choose a firstname", groups={"registration"})
      * @Assert\Length(
      *     min=3,
      *     max=30,
      *     minMessage="Your firstname should contain at least {{ limit }} characters",
      *     maxMessage="Your firstname should not contain more than {{ limit }} characters",
-     *     allowEmptyString=false
+     *     allowEmptyString=false,
+     *     groups={"registration"}
      * )
      */
     private $firstname;
@@ -84,9 +87,10 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=100, unique=true)
      *
-     * @Assert\NotBlank(message="You must enter an email")
+     * @Assert\NotBlank(message="You must enter an email", groups={"registration"})
      * @Assert\Email(
-     *     message="The email '{{ value }}' is not a valid email"
+     *     message="The email '{{ value }}' is not a valid email",
+     *     groups={"registration"}
      * )
      */
     private $email;
@@ -96,12 +100,13 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank(message="You must choose a Password")
+     * @Assert\NotBlank(message="You must choose a Password", groups={"registration"})
      * @Assert\Length(
      *     min=5,
      *     max=255,
      *     minMessage="Your Password should contain at least {{ limit }} characters",
-     *     allowEmptyString=false
+     *     allowEmptyString=false,
+     *     groups={"registration"}
      * )
      */
     private $password;
