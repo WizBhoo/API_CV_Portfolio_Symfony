@@ -19,6 +19,6 @@ app_contact:
   methods: GET|POST
 
 app_admin_dashboard:
-  path: /apiadmin/dashboard
+  path: /api-admin/dashboard
   controller: App\Controller\AdminController::dashboard
   methods: GET
