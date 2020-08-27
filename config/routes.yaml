@@ -18,6 +18,10 @@ app_contact:
   controller: App\Controller\ContactController::contact
   methods: GET|POST
 
+app_register:
+  path: /register
+  controller: App\Controller\UserController::register
+
 app_admin_dashboard:
   path: /api-admin/dashboard
   controller: App\Controller\AdminController::dashboard
