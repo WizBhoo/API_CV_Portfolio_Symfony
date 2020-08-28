@@ -8,6 +8,8 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\CallbackTransformer;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
@@ -38,7 +40,44 @@ class UserType extends AbstractType
             ->add(
                 'password',
                 RepeatedType::class,
-                ['type' => PasswordType::class]
+                [
+                    'type' => PasswordType::class,
+                    'invalid_message' =>
+                            'Both passwords must match',
+                    'required' => true,
+                    'first_options'  => ['label' => 'Password'],
+                    'second_options' =>
+                        [
+                            'label' => 'Confirm Password',
+                        ],
+                ]
+            )
+            ->add(
+                'roles',
+                ChoiceType::class,
+                [
+                    'choices' =>
+                        [
+                            'User' => 'ROLE_USER',
+                            'Admin' => 'ROLE_ADMIN',
+                        ],
+                    'required' => true,
+                    'multiple' => false,
+                    'expanded' => true,
+                ]
+            )
+        ;
+
+        $builder->get('roles')
+            ->addModelTransformer(
+                new CallbackTransformer(
+                    function ($rolesArray) {
+                        return count($rolesArray) ? $rolesArray[0]: null;
+                    },
+                    function ($rolesString) {
+                        return [$rolesString];
+                    }
+                )
             )
         ;
     }
@@ -52,11 +91,6 @@ class UserType extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver->setDefaults(
-            [
-                'data_class' => User::class,
-                'validation_groups' => ['registration'],
-            ]
-        );
+        $resolver->setDefaults(['data_class' => User::class]);
     }
 }
