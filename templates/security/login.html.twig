@@ -1,0 +1,55 @@
+{% extends 'security/layout.html.twig' %}
+
+{% block body %}
+    <!--================ Start Login Area =================-->
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" action="{{ path('app_login') }}" method="post">
+					<span class="login100-form-title p-b-26">
+						<a href="{{ path('home') }}">
+                            <img src="{{ asset('img/logo.png') }}" alt="APi" />
+                         </a>
+					</span>
+                    <span class="login100-form-title p-b-26">
+						Sign In
+					</span>
+                    <div class="wrap-input100 validate-input" data-validate = "Saisissez un email valide.">
+                        <input class="input100 username" type="text" name="username">
+                        <span class="focus-input100" data-placeholder="Username"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Vous devez saisir votre mot de passe.">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+                        <input class="input100 password" type="password" name="password">
+                        <span class="focus-input100" data-placeholder="Password"></span>
+                    </div>
+                    <input type="hidden" name="_csrf_token"
+                           value="{{ csrf_token('authenticate') }}"
+                    >
+                    <div class="p-b-26">
+                        {% if error %}
+                            <div class="alert alert-danger text-center">
+                                {{ error.messageKey|trans(error.messageData, 'security') }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="container-login100-form-btn p-b-26">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+                                {% trans %}Login{% endtrans %}
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--================ End Login Area =================-->
+
+{% endblock %}

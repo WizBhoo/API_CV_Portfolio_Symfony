@@ -1,4 +1,5 @@
-'This email already exists': 'Cet email existe déjà'
+'Please, choose another email': 'Merci de choisir un autre email'
+'Please, choose another username': 'Merci de choisir un autre username'
 'The firstname should contain at least {{ limit }} characters': 'Le prénom doit contenir au moins {{ limit }} caractères'
 'The firstname should not contain more than {{ limit }} characters': 'Le prénom ne doit pas contenir plus de {{ limit }} caractères'
 'The lastname should contain at least {{ limit }} characters': 'Le nom doit contenir au moins {{ limit }} caractères'
