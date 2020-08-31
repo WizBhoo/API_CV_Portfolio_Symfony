@@ -6,7 +6,6 @@
 
 namespace App\Entity;
 
-use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -18,7 +17,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table("user")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  *
- * @UniqueEntity(fields={"email"}, message="This email already exists", groups={"registration"})
+ * @UniqueEntity(fields={"email"}, message="This email already exists")
  */
 class User implements UserInterface
 {
@@ -36,14 +35,13 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=30, unique=true)
      *
-     * @Assert\NotBlank(message="You must choose a username", groups={"registration"})
+     * @Assert\NotBlank(message="You must choose a username")
      * @Assert\Length(
      *     min=3,
      *     max=30,
-     *     minMessage="Your username should contain at least {{ limit }} characters",
-     *     maxMessage="Your username should not contain more than {{ limit }} characters",
-     *     allowEmptyString=false,
-     *     groups={"registration"}
+     *     minMessage="The username should contain at least {{ limit }} characters",
+     *     maxMessage="The username should not contain more than {{ limit }} characters",
+     *     allowEmptyString=false
      * )
      */
     private $username;
@@ -53,14 +51,13 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=30)
      *
-     * @Assert\NotBlank(message="You must choose a lastname", groups={"registration"})
+     * @Assert\NotBlank(message="You must choose a lastname")
      * @Assert\Length(
      *     min=4,
      *     max=30,
-     *     minMessage="Your lastname should contain at least {{ limit }} characters",
-     *     maxMessage="Your lastname should not contain more than {{ limit }} characters",
-     *     allowEmptyString=false,
-     *     groups={"registration"}
+     *     minMessage="The lastname should contain at least {{ limit }} characters",
+     *     maxMessage="The lastname should not contain more than {{ limit }} characters",
+     *     allowEmptyString=false
      * )
      */
     private $lastname;
@@ -70,14 +67,13 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=30)
      *
-     * @Assert\NotBlank(message="You must choose a firstname", groups={"registration"})
+     * @Assert\NotBlank(message="You must choose a firstname")
      * @Assert\Length(
      *     min=3,
      *     max=30,
-     *     minMessage="Your firstname should contain at least {{ limit }} characters",
-     *     maxMessage="Your firstname should not contain more than {{ limit }} characters",
-     *     allowEmptyString=false,
-     *     groups={"registration"}
+     *     minMessage="The firstname should contain at least {{ limit }} characters",
+     *     maxMessage="The firstname should not contain more than {{ limit }} characters",
+     *     allowEmptyString=false
      * )
      */
     private $firstname;
@@ -87,10 +83,9 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=100, unique=true)
      *
-     * @Assert\NotBlank(message="You must enter an email", groups={"registration"})
+     * @Assert\NotBlank(message="You must enter an email")
      * @Assert\Email(
-     *     message="The email '{{ value }}' is not a valid email",
-     *     groups={"registration"}
+     *     message="The email '{{ value }}' is not a valid email"
      * )
      */
     private $email;
@@ -100,13 +95,12 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank(message="You must choose a Password", groups={"registration"})
+     * @Assert\NotBlank(message="You must choose a Password")
      * @Assert\Length(
      *     min=5,
      *     max=255,
-     *     minMessage="Your Password should contain at least {{ limit }} characters",
-     *     allowEmptyString=false,
-     *     groups={"registration"}
+     *     minMessage="The Password should contain at least {{ limit }} characters",
+     *     allowEmptyString=false
      * )
      */
     private $password;
@@ -117,31 +111,6 @@ class User implements UserInterface
      * @ORM\Column(type="json")
      */
     private $roles = [];
-
-    /**
-     * Token used for account activation or to reset account password.
-     *
-     * @var string
-     *
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $accountToken;
-
-    /**
-     * To manage token validity period.
-     *
-     * @var DateTimeInterface
-     *
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $accountTokenAt;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(type="boolean", options={"default"=false})
-     */
-    private $accountStatus = false;
 
     /**
      * @return int|null
@@ -274,66 +243,6 @@ class User implements UserInterface
     }
 
     /**
-     * @return string|null
-     */
-    public function getAccountToken(): ?string
-    {
-        return $this->accountToken;
-    }
-
-    /**
-     * @param string|null $accountToken
-     *
-     * @return $this
-     */
-    public function setAccountToken(?string $accountToken): self
-    {
-        $this->accountToken = $accountToken;
-
-        return $this;
-    }
-
-    /**
-     * @return DateTimeInterface|null
-     */
-    public function getAccountTokenAt(): ?DateTimeInterface
-    {
-        return $this->accountTokenAt;
-    }
-
-    /**
-     * @param DateTimeInterface|null $accountTokenAt
-     *
-     * @return $this
-     */
-    public function setAccountTokenAt(?DateTimeInterface $accountTokenAt): self
-    {
-        $this->accountTokenAt = $accountTokenAt;
-
-        return $this;
-    }
-
-    /**
-     * @return bool|null
-     */
-    public function getAccountStatus(): ?bool
-    {
-        return $this->accountStatus;
-    }
-
-    /**
-     * @param bool $accountStatus
-     *
-     * @return $this
-     */
-    public function setAccountStatus(bool $accountStatus): self
-    {
-        $this->accountStatus = $accountStatus;
-
-        return $this;
-    }
-
-    /**
      * @see UserInterface
      */
     public function getSalt()
@@ -346,7 +255,5 @@ class User implements UserInterface
      */
     public function eraseCredentials()
     {
-        $this->accountToken = null;
-        $this->accountTokenAt = null;
     }
 }
