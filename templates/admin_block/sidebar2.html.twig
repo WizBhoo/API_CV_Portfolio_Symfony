@@ -9,8 +9,8 @@
             <div class="image img-cir img-120">
                 <img src="{{ asset('img/avatar_api.png') }}" alt="Adrien PIERRARD" />
             </div>
-            <h4 class="name">Add Current Username</h4>
-            <a class="sign-out" id="sign-out" href="">Sign out</a>
+            <h4 class="name">{{ app.user.firstname }} {{ app.user.lastname }}</h4>
+            <a class="sign-out" id="sign-out" href="{{ path('app_logout') }}">Sign out</a>
         </div>
         <nav class="navbar-sidebar2">
             <ul class="list-unstyled navbar__list">

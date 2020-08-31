@@ -18,6 +18,16 @@ app_contact:
   controller: App\Controller\ContactController::contact
   methods: GET|POST
 
+app_login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+  methods: GET|POST
+
+app_logout:
+  path: /logout
+  controller: App\Controller\SecurityController::logout
+  methods: GET
+
 app_admin_dashboard:
   path: /api-admin/dashboard
   controller: App\Controller\AdminController::dashboard
