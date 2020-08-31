@@ -42,8 +42,7 @@ class UserType extends AbstractType
                 RepeatedType::class,
                 [
                     'type' => PasswordType::class,
-                    'invalid_message' =>
-                            'Both passwords must match',
+                    'invalid_message' => 'Both passwords must match',
                     'required' => true,
                     'first_options'  => ['label' => 'Password'],
                     'second_options' =>
@@ -72,7 +71,7 @@ class UserType extends AbstractType
             ->addModelTransformer(
                 new CallbackTransformer(
                     function ($rolesArray) {
-                        return count($rolesArray) ? $rolesArray[0]: null;
+                        return count($rolesArray) ? $rolesArray[0] : null;
                     },
                     function ($rolesString) {
                         return [$rolesString];
