@@ -43,6 +43,11 @@ app_admin_register:
   controller: App\Controller\UserController::register
   methods: GET|POST
 
+app_admin_user_switch:
+  path: /api-admin/user/{id}/switch
+  controller: App\Controller\UserController::switch
+  methods: GET
+
 app_admin_user_delete:
   path: /api-admin/user/{id}/delete
   controller: App\Controller\UserController::delete

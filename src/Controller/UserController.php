@@ -44,11 +44,11 @@ class UserController extends AbstractController
      */
     public function usersList(): Response
     {
-        $users = $this->userManager->findAllUsers();
-
         return $this->render(
             'admin/users.html.twig',
-            ['users' => $users]
+            [
+                'users' => $this->userManager->findAllUsers(),
+            ]
         );
     }
 
@@ -59,8 +59,7 @@ class UserController extends AbstractController
      *
      * @return Response
      *
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws ORMException|OptimisticLockException
      */
     public function register(Request $request): Response
     {
@@ -86,6 +85,22 @@ class UserController extends AbstractController
     }
 
     /**
+     * Switch User role from Admin to User and vice versa.
+     *
+     * @param User $user
+     *
+     * @return Response
+     *
+     * @throws ORMException|OptimisticLockException
+     */
+    public function switch(User $user): Response
+    {
+        $this->userManager->switchRole($user);
+
+        return $this->redirectToRoute('app_admin_users');
+    }
+
+    /**
      * Delete a user.
      *
      * @param Request $request
@@ -93,8 +108,7 @@ class UserController extends AbstractController
      *
      * @return Response
      *
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws ORMException|OptimisticLockException
      */
     public function delete(Request $request, User $user): Response
     {
