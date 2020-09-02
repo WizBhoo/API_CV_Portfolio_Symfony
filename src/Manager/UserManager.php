@@ -73,4 +73,19 @@ class UserManager
 
         $this->userRepository->create($user);
     }
+
+    /**
+     * Delete a User in db.
+     *
+     * @param User $user
+     *
+     * @return void
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function deleteUser(User $user): void
+    {
+        $this->userRepository->delete($user);
+    }
 }
