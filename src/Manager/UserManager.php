@@ -60,8 +60,7 @@ class UserManager
      *
      * @return void
      *
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws ORMException|OptimisticLockException
      */
     public function createUser(User $user): void
     {
@@ -81,8 +80,7 @@ class UserManager
      *
      * @return void
      *
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws ORMException|OptimisticLockException
      */
     public function switchRole(User $user): void
     {
@@ -104,8 +102,7 @@ class UserManager
      *
      * @return void
      *
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws ORMException|OptimisticLockException
      */
     public function deleteUser(User $user): void
     {

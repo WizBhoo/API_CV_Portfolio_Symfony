@@ -39,8 +39,7 @@ class UserRepository extends ServiceEntityRepository
      *
      * @return void
      *
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws ORMException|OptimisticLockException
      */
     public function create(User $user): void
     {
@@ -55,8 +54,7 @@ class UserRepository extends ServiceEntityRepository
      *
      * @return void
      *
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws ORMException|OptimisticLockException
      */
     public function update(User $user): void
     {
@@ -71,8 +69,7 @@ class UserRepository extends ServiceEntityRepository
      *
      * @return void
      *
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws ORMException|OptimisticLockException
      */
     public function delete(User $user): void
     {
