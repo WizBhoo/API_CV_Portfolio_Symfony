@@ -15,12 +15,12 @@
                     <span class="login100-form-title p-b-26">
 						Sign In
 					</span>
-                    <div class="wrap-input100 validate-input" data-validate = "Saisissez un email valide.">
+                    <div class="wrap-input100 validate-input" data-validate = "{% trans %}Please enter your username{% endtrans %}">
                         <input class="input100 username" type="text" name="username">
                         <span class="focus-input100" data-placeholder="Username"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Vous devez saisir votre mot de passe.">
+                    <div class="wrap-input100 validate-input" data-validate="{% trans %}Please enter your password{% endtrans %}">
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
@@ -44,6 +44,11 @@
                                 {% trans %}Login{% endtrans %}
                             </button>
                         </div>
+                    </div>
+                    <div class="text-center">
+                        <a class="txt2" href="{{ path('app_forgot_password_request') }}">
+                            {% trans %}Forgotten password{% endtrans %} ?
+                        </a>
                     </div>
                 </form>
             </div>

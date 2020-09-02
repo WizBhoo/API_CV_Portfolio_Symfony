@@ -21,7 +21,7 @@ class ContactController extends AbstractController
     /**
      * Show contact page with contact form.
      *
-     * @param Request $request
+     * @param Request        $request
      * @param ContactManager $contactManager
      *
      * @return Response
