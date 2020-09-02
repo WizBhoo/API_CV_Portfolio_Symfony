@@ -75,6 +75,29 @@ class UserManager
     }
 
     /**
+     * Switch User's role in db (Admin or User).
+     *
+     * @param User $user
+     *
+     * @return void
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function switchRole(User $user): void
+    {
+        switch ($user->getRoles()) {
+            case ['ROLE_ADMIN']:
+                $user->setRoles(['ROLE_USER']);
+                break;
+            case ['ROLE_USER']:
+                $user->setRoles(['ROLE_ADMIN']);
+        }
+
+        $this->userRepository->update($user);
+    }
+
+    /**
      * Delete a User in db.
      *
      * @param User $user

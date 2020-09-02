@@ -86,6 +86,23 @@ class UserController extends AbstractController
     }
 
     /**
+     * Switch User role from Admin to User and vice versa.
+     *
+     * @param User $user
+     *
+     * @return Response
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function switch(User $user): Response
+    {
+        $this->userManager->switchRole($user);
+
+        return $this->redirectToRoute('app_admin_users');
+    }
+
+    /**
      * Delete a user.
      *
      * @param Request $request

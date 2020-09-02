@@ -49,6 +49,22 @@ class UserRepository extends ServiceEntityRepository
     }
 
     /**
+     * Persists User updated in db.
+     *
+     * @param User $user
+     *
+     * @return void
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function update(User $user): void
+    {
+        $this->_em->persist($user);
+        $this->_em->flush();
+    }
+
+    /**
      * Remove User in db.
      *
      * @param User $user
