@@ -44,11 +44,11 @@ class UserController extends AbstractController
      */
     public function usersList(): Response
     {
-        $users = $this->userManager->findAllUsers();
-
         return $this->render(
             'admin/users.html.twig',
-            ['users' => $users]
+            [
+                'users' => $this->userManager->findAllUsers(),
+            ]
         );
     }
 
@@ -59,8 +59,7 @@ class UserController extends AbstractController
      *
      * @return Response
      *
-     * @throws ORMException
-     * @throws OptimisticLockException
+     * @throws ORMException|OptimisticLockException
      */
     public function register(Request $request): Response
     {
@@ -76,12 +75,58 @@ class UserController extends AbstractController
                 "New User Account created !"
             );
 
-            return $this->redirectToRoute('app_admin_dashboard');
+            return $this->redirectToRoute('app_admin_users');
         }
 
         return $this->render(
             'admin/register.html.twig',
             ['form' => $form->createView()]
         );
+    }
+
+    /**
+     * Switch User role from Admin to User and vice versa.
+     *
+     * @param User $user
+     *
+     * @return Response
+     *
+     * @throws ORMException|OptimisticLockException
+     */
+    public function switch(User $user): Response
+    {
+        $this->userManager->switchRole($user);
+
+        return $this->redirectToRoute('app_admin_users');
+    }
+
+    /**
+     * Delete a user.
+     *
+     * @param Request $request
+     * @param User    $user
+     *
+     * @return Response
+     *
+     * @throws ORMException|OptimisticLockException
+     */
+    public function delete(Request $request, User $user): Response
+    {
+        if (!$this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
+            $this->addFlash(
+                'error',
+                'Error please try again !'
+            );
+
+            return $this->redirectToRoute('app_admin_users');
+        }
+
+        $this->userManager->deleteUser($user);
+        $this->addFlash(
+            'success',
+            "User has been well deleted"
+        );
+
+        return $this->redirectToRoute('app_admin_users');
     }
 }
