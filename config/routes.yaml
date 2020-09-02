@@ -33,6 +33,11 @@ app_admin_dashboard:
   controller: App\Controller\AdminController::dashboard
   methods: GET
 
+app_admin_users:
+  path: /api-admin/users
+  controller: App\Controller\UserController::usersList
+  methods: GET
+
 app_admin_register:
   path: /api-admin/register
   controller: App\Controller\UserController::register

@@ -1,0 +1,85 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="overview-wrap">
+                <h1 class="title-1 m-b-35 text-center">
+                    {% trans %}Users List{% endtrans %}
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-data__tool">
+                <div class="table-data__tool-right">
+                    <a href="{{ path('app_admin_register') }}">
+                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                            <i class="zmdi zmdi-plus"></i>{% trans %}Add User{% endtrans %}
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!-- DATA TABLE -->
+            <h3 class="title-5 m-b-15">{% trans %}Registrated Users{% endtrans %}</h3>
+            <div class="table-responsive table-responsive-data2">
+                <table class="table table-data2">
+                    <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Username</th>
+                        <th>Fullname</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th class="action">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in users %}
+                        <tr class="tr-shadow">
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.firstname }} {{ user.lastname }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>
+                                {% if 'ROLE_ADMIN' in user.roles %}
+                                    {% trans %}Admin{% endtrans %}
+                                {% else %}
+                                    {% trans %}User{% endtrans %}
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="table-data-feature">
+                                    <form action=""
+                                          method="POST"
+                                          onsubmit="return confirm('Are you sure you want to switch {{ user.username }} ?')">
+                                        <input type="hidden" name="_method" value="POST">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('switch' ~ user.id) }}">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Switcher">
+                                            <i class="zmdi zmdi-refresh"></i>
+                                        </button>
+                                    </form>
+                                    <form action=""
+                                          method="POST"
+                                          onsubmit="return confirm('Are you sure you want to delete {{ user.username }} ?')">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="spacer"></tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- END DATA TABLE -->
+        </div>
+    </div>
+
+{% endblock %}

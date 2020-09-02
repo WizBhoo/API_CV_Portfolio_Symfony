@@ -46,6 +46,9 @@
 'User': 'Utilisateur'
 'Admin': 'Administrateur'
 'Create': 'Créer'
+'Users List': 'Liste des Utilisateurs'
+'Add User': 'Ajouter un Utilisateur'
+'Registrated Users': 'Utilisateurs Enregistrés'
 'New User Account created !': "Nouveau compte utilisateur créé !"
 # Trans block project_gallery
 'My Portfolio': 'Mes Réalisations'

@@ -44,6 +44,16 @@ class UserManager
     }
 
     /**
+     * Retrieve all users from db.
+     *
+     * @return User[]
+     */
+    public function findAllUsers(): array
+    {
+        return $this->userRepository->findAll();
+    }
+
+    /**
      * Create a new User in db.
      *
      * @param User $user

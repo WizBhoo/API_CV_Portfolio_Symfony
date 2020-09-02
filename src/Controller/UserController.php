@@ -38,6 +38,21 @@ class UserController extends AbstractController
     }
 
     /**
+     * Show the Users list.
+     *
+     * @return Response
+     */
+    public function usersList(): Response
+    {
+        $users = $this->userManager->findAllUsers();
+
+        return $this->render(
+            'admin/users.html.twig',
+            ['users' => $users]
+        );
+    }
+
+    /**
      * Register a new User.
      *
      * @param Request $request
