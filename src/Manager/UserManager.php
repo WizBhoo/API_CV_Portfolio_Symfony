@@ -55,6 +55,20 @@ class UserManager
     }
 
     /**
+     * Retrieve a User by email from db.
+     *
+     * @param string $email
+     *
+     * @return User|null
+     */
+    public function findUserByEmail(string $email): ?User
+    {
+        return $this->userRepository->findOneBy(
+            ['email' => $email]
+        );
+    }
+
+    /**
      * Create a new User in db.
      *
      * @param User $user
@@ -132,5 +146,27 @@ class UserManager
     public function deleteUser(User $user): void
     {
         $this->userRepository->delete($user);
+    }
+
+    /**
+     * Update a User password in db.
+     *
+     * @param User|object $user
+     * @param string      $plainPassword
+     *
+     * @return void
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function updateUserPassword($user, string $plainPassword): void
+    {
+        $password = $this->passwordEncoder->encodePassword(
+            $user,
+            $plainPassword
+        );
+        $user->setPassword($password);
+
+        $this->userRepository->update($user);
     }
 }

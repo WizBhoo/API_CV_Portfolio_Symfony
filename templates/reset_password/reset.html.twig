@@ -1,0 +1,52 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}APi - {% trans %}Reset password{% endtrans %}{% endblock %}
+
+{% block body %}
+
+    <!--================ Start Reset Password Banner Area =================-->
+
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>{% trans %}Reset password{% endtrans %}</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_contact') }}">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================ End Reset Password Banner Area =================-->
+
+    <!--================ Start Reset Password Form Area =================-->
+
+    <section class="section_gap portfolio_area" id="work">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="main-title">
+                        <h1>{% trans %}Reset password{% endtrans %}</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    {{ form_start(resetForm, {'attr': {'class': 'contact_form'}}) }}
+                    {{ form_row(resetForm.plainPassword) }}
+
+                    <div class="form-group col-md-12 text-center">
+                        <button class="primary-btn">{% trans %}Send{% endtrans %}</button>
+                    </div>
+                    {{ form_end(resetForm) }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================ End Reset Password Form Area =================-->
+
+{% endblock %}

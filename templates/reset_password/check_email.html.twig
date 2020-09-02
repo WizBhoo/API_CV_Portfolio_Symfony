@@ -1,0 +1,54 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}APi - Confirmation{% endblock %}
+
+{% block body %}
+
+    <!--================ Start Confirmation Banner Area =================-->
+
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>{% trans %}Email sent{% endtrans %} !</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_contact') }}">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================ End Confirmation Banner Area =================-->
+
+    <!--================ Start Confirmation Area =================-->
+
+    <section class="section_gap portfolio_area" id="work">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="main-title">
+                        <h1>{% trans %}Check your email{% endtrans %} !</h1>
+                        <p>
+                            {% trans %}
+                                An email has been sent that contains a link that you can click to reset your password. This link will expire in
+                            {% endtrans %}
+                            {{ tokenLifetime|date('g') }}
+                            {% trans %}hour(s){% endtrans %}.
+                        </p>
+                        <p>
+                            {% trans %}If you don't receive an email please check your spam folder or {% endtrans %}
+                            <a href="{{ path('app_forgot_password_request') }}">
+                                {% trans %}try again{% endtrans %}.
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================ End Confirmation Area =================-->
+
+{% endblock %}
