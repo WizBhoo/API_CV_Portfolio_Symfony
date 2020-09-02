@@ -44,6 +44,7 @@
 'Enter your email address and you will receive a link to reset your password': 'Saisissez votre email et vous recevrez un lien pour changer votre password'
 'Please enter your email': 'Merci de saisir votre email'
 'Reset password': 'Nouveau password'
+'New password': 'Nouveau password'
 'Email sent': 'Email envoyé'
 'Check your email': 'Vérifiez vos emails'
 'An email has been sent that contains a link that you can click to reset your password. This link will expire in':
@@ -51,6 +52,7 @@
 'hour(s)': 'heure(s)'
 "If you don't receive an email please check your spam folder or": "Si vous ne l'avez pas reçu, merci de vérifier vos spams ou"
 'try again': 'réessayez'
+'No reset password token found.': 'Le token de réinitialisation du password est introuvable.'
 # Trans Admin pages
 'Welcome': 'Bonjour'
 'Create a User account': 'Ajouter un compte utilisateur'
