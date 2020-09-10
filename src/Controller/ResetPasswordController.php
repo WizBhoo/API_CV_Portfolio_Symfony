@@ -4,8 +4,8 @@ namespace App\Controller;
 
 use App\Form\ChangePasswordFormType;
 use App\Form\ResetPasswordRequestFormType;
-use App\Manager\ContactManager;
 use App\Manager\UserManager;
+use App\Security\ResetPasswordRequester;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -32,6 +32,13 @@ class ResetPasswordController extends AbstractController
     private $resetPasswordHelper;
 
     /**
+     * A ResetPasswordRequester Instance.
+     *
+     * @var ResetPasswordRequester
+     */
+    private $resetPasswordRequester;
+
+    /**
      * A UserManager Instance.
      *
      * @var UserManager
@@ -39,24 +46,17 @@ class ResetPasswordController extends AbstractController
     private $userManager;
 
     /**
-     * A ContactManager Instance.
-     *
-     * @var ContactManager
-     */
-    private $contactManager;
-
-    /**
      * ResetPasswordController constructor.
      *
      * @param ResetPasswordHelperInterface $resetPasswordHelper
+     * @param ResetPasswordRequester       $resetPasswordRequester
      * @param UserManager                  $userManager
-     * @param ContactManager               $contactManager
      */
-    public function __construct(ResetPasswordHelperInterface $resetPasswordHelper, UserManager $userManager, ContactManager $contactManager)
+    public function __construct(ResetPasswordHelperInterface $resetPasswordHelper, ResetPasswordRequester $resetPasswordRequester, UserManager $userManager)
     {
         $this->resetPasswordHelper = $resetPasswordHelper;
+        $this->resetPasswordRequester = $resetPasswordRequester;
         $this->userManager = $userManager;
-        $this->contactManager = $contactManager;
     }
 
     /**
@@ -74,9 +74,14 @@ class ResetPasswordController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            return $this->processSendingPasswordResetEmail(
-                $form->get('email')->getData()
-            );
+            $this->setCanCheckEmailInSession();
+            $this->resetPasswordRequester
+                ->processPasswordRequest(
+                    $form->get('email')->getData()
+                )
+            ;
+
+            return $this->redirectToRoute('app_check_email');
         }
 
         return $this->render(
@@ -114,29 +119,8 @@ class ResetPasswordController extends AbstractController
      */
     public function reset(Request $request, ?string $token): Response
     {
-        if ($token) {
-            $this->storeTokenInSession($token);
-
-            return $this->redirectToRoute('app_reset_password');
-        }
-
-        $token = $this->getTokenFromSession();
-        if (null === $token) {
-            throw $this->createNotFoundException(
-                'No reset password token found.'
-            );
-        }
-
-        try {
-            $user = $this->resetPasswordHelper->validateTokenAndFetchUser($token);
-        } catch (ResetPasswordExceptionInterface $e) {
-            $this->addFlash('reset_password_error', sprintf(
-                'There was a problem validating your reset request - %s',
-                $e->getReason()
-            ));
-
-            return $this->redirectToRoute('app_forgot_password_request');
-        }
+        $this->handleToken($token);
+        $user = $this->validateToken($token);
 
         $form = $this->createForm(ChangePasswordFormType::class);
         $form->handleRequest($request);
@@ -159,34 +143,49 @@ class ResetPasswordController extends AbstractController
     }
 
     /**
-     * @param string $emailFormData
+     * Handle token to store it in session.
      *
-     * @return RedirectResponse
+     * @param string|null $token
      *
-     * @throws TransportExceptionInterface
+     * @return string|RedirectResponse
      */
-    private function processSendingPasswordResetEmail(string $emailFormData): RedirectResponse
+    private function handleToken(?string $token)
     {
-        $user = $this->userManager->findUserByEmail($emailFormData);
+        if ($token) {
+            $this->storeTokenInSession($token);
 
-        $this->setCanCheckEmailInSession();
-
-        if (!$user) {
-            return $this->redirectToRoute('app_check_email');
+            return $this->redirectToRoute('app_reset_password');
         }
 
+        $token = $this->getTokenFromSession();
+        if (null === $token) {
+            throw $this->createNotFoundException(
+                'No reset password token found.'
+            );
+        }
+
+        return $token;
+    }
+
+    /**
+     * Validate token and return associated User.
+     *
+     * @param string $token
+     *
+     * @return object|RedirectResponse
+     */
+    private function validateToken(string $token)
+    {
         try {
-            $resetToken = $this->resetPasswordHelper->generateResetToken($user);
+            return $this->resetPasswordHelper
+                ->validateTokenAndFetchUser($token);
         } catch (ResetPasswordExceptionInterface $e) {
-            return $this->redirectToRoute('app_check_email');
+            $this->addFlash('reset_password_error', sprintf(
+                'There was a problem validating your reset request - %s',
+                $e->getReason()
+            ));
+
+            return $this->redirectToRoute('app_forgot_password_request');
         }
-
-        $this->contactManager->sendPasswordResetEmail(
-            $user,
-            $resetToken,
-            $this->resetPasswordHelper->getTokenLifetime()
-        );
-
-        return $this->redirectToRoute('app_check_email');
     }
 }
