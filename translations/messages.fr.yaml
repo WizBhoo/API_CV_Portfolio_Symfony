@@ -36,6 +36,12 @@
 'Your message has been sent !': 'Votre message a été envoyé !'
 'Error please try again !': 'Erreur, veuillez réessayer !'
 'Send': 'Envoyer'
+# Trans Profile page
+'My Profile': 'Mon profil'
+'Here, you can update your profile.': 'Ici, vous pouvez modifier les informations de votre profil utilisateur.'
+"Let the password empty if you don't want to change it.": 'Laissez le mot de passe vide si vous ne voulez pas le changer.'
+'Modify': 'Modifier'
+'Profile well updated !': 'Votre profil a bien été mis à jour !'
 # Trans Admin pages
 'Welcome': 'Bonjour'
 'Create a User account': 'Ajouter un compte utilisateur'

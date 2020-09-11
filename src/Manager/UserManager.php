@@ -74,6 +74,30 @@ class UserManager
     }
 
     /**
+     * Update User's profile in db.
+     *
+     * @param User   $user
+     * @param string $password
+     *
+     * @return void
+     *
+     * @throws ORMException|OptimisticLockException
+     */
+    public function updateProfile(User $user, string $password): void
+    {
+        if (!empty($user->getPassword())) {
+            $password = $this->passwordEncoder->encodePassword(
+                $user,
+                $user->getPassword()
+            );
+        }
+
+        $user->setPassword($password);
+
+        $this->userRepository->update($user);
+    }
+
+    /**
      * Switch User's role in db (Admin or User).
      *
      * @param User $user

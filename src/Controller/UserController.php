@@ -7,6 +7,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Form\ProfileType;
 use App\Form\UserType;
 use App\Manager\UserManager;
 use Doctrine\ORM\OptimisticLockException;
@@ -81,6 +82,39 @@ class UserController extends AbstractController
         return $this->render(
             'admin/register.html.twig',
             ['form' => $form->createView()]
+        );
+    }
+
+    /**
+     * Update User profile information.
+     *
+     * @param Request $request
+     * @param User    $user
+     *
+     * @return Response
+     *
+     * @throws ORMException|OptimisticLockException
+     */
+    public function edit(Request $request, User $user): Response
+    {
+        $oldPassword = $user->getPassword();
+        $form = $this->createForm(ProfileType::class, $user);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->userManager->updateProfile($user, $oldPassword);
+
+            $this->addFlash(
+                'success',
+                "Profile well updated !"
+            );
+
+            return $this->redirectToRoute('home');
+        }
+
+        return $this->render(
+            'site/profile.html.twig',
+            ['form' => $form->createView(), 'user' => $user]
         );
     }
 

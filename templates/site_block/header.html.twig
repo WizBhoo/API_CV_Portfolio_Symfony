@@ -41,7 +41,7 @@
                             </li>
                         {% elseif is_granted('ROLE_USER') %}
                             <li class="nav-item">
-                                <a class="nav-link" href="">
+                                <a class="nav-link" href="{{ path('app_user_profile', {'username': app.user.username}) }}">
                                     {% trans %}My Account{% endtrans %}
                                 </a>
                             </li>
