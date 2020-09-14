@@ -1,0 +1,58 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}APi - {% trans %}Forgotten password{% endtrans %} ?{% endblock %}
+
+{% block body %}
+
+    <!--================ Start Reset Password Request Banner Area =================-->
+
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-right">
+                    <h1>{% trans %}Forgotten password{% endtrans %} ?</h1>
+                    <div class="page_link">
+                        <a href="{{ path('home') }}">{% trans %}Homepage{% endtrans %}</a>
+                        <a href="{{ path('app_contact') }}">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% for flashError in app.flashes('reset_password_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    <!--================ End Reset Password Request Banner Area =================-->
+
+    <!--================ Start Reset Password Request Form Area =================-->
+
+    <section class="section_gap portfolio_area" id="work">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="main-title">
+                        <h1>Reset password</h1>
+                        <p>
+                            {% trans %}Enter your email address and you will receive a link to reset your password{% endtrans %}.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    {{ form_start(requestForm, {'attr': {'class': 'contact_form'}}) }}
+                    {{ form_row(requestForm.email) }}
+
+                    <div class="form-group col-md-12 text-center">
+                        <button class="primary-btn">{% trans %}Send{% endtrans %}</button>
+                    </div>
+                    {{ form_end(requestForm) }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================ End Reset Password Request Form Area =================-->
+
+{% endblock %}
