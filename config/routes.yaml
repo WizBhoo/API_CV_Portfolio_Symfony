@@ -73,4 +73,3 @@ app_admin_user_switch:
 app_admin_user_delete:
   path: /api-admin/user/{id}/delete
   controller: App\Controller\UserController::delete
-
