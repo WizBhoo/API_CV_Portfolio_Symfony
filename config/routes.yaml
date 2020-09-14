@@ -13,6 +13,16 @@ app_project_show:
   controller: App\Controller\PortfolioController::show
   methods: GET
 
+app_blog_home:
+  path: /blog
+  controller: App\Controller\BlogController::blogHome
+  methods: GET
+
+app_blog_show:
+  path: /blog/{slug}
+  controller: App\Controller\BlogController::show
+  methods: GET
+
 app_contact:
   path: /contact
   controller: App\Controller\ContactController::contact

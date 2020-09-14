@@ -23,6 +23,18 @@
   "Pour avoir encouragé Adrien à se lancer dans sa reconversion professionnelle et l'avoir accompagné tout au long de celle-ci, je peux vous dire qu'Adrien est une personne motivée ! Il a su appréhender rapidement beaucoup de notions tout en respectant son code et ses projets. Son ambition est de poursuivre cet apprentissage au quotidien pour s'améliorer en tant que développeur."
 "It was a pleasure to follow Adrien during his training because he is a curious, rigorous and autonomous person. In addition, it has the main quality that every developer must have: persistence. I was also impressed by his ability to adapt to languages, technologies and a profession that were completely unknown to him a few months ago. If there was a vacancy in my company for a junior backend / symfony I would highly recommend Adrien's profile.":
   "Ça a été un plaisir de suivre Adrien pendant sa formation car c'est quelqu'un de curieux, rigoureux et autonome. De plus, il possède la principale qualité que tout développeur doit avoir : la persévérance. J'ai aussi été impressionné par sa capacité d'adaptation à des langages, technologies et à un métier qui lui étaient complètement inconnus il y a quelques mois encore. S'il y avait un poste à pourvoir dans ma société pour un junior backend/symfony je recommanderais fortement le profil d'Adrien."
+# Trans blog pages
+'My Blog': 'Mon Blog'
+'Welcome': 'Bienvenue'
+'to my Blog': 'sur mon Blog'
+'Here is the list of my Articles from the most recent to the oldest allowing you to learn':
+  "Voici la liste de mes Articles du plus récent au plus ancien vous permettant d'en apprendre"
+'more about my professional choices as well as my development wishes.': "d'avantage sur mes choix d'orientation professionnelle ainsi que sur mes souhaits d'évolution."
+'Good reading': 'Bonne lecture'
+'See more': 'Voir plus'
+'Modified': 'Modifié le'
+'Commented': 'Commenté'
+'times': 'fois'
 # Trans contact page
 'Contact Me': 'Me Contacter'
 'Please leave a message with your details': 'Merci de laisser un message avec vos coordonnées'
@@ -60,7 +72,7 @@
 'try again': 'réessayez'
 'No reset password token found.': 'Le token de réinitialisation du password est introuvable.'
 # Trans Admin pages
-'Welcome': 'Bonjour'
+'Hello': 'Bonjour'
 'Create a User account': 'Ajouter un compte utilisateur'
 'Username': 'Username'
 'Password': 'Password'
