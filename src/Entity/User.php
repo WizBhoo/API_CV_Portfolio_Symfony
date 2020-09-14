@@ -17,8 +17,8 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table("user")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  *
- * @UniqueEntity(fields={"email"}, message="Please, choose another email")
- * @UniqueEntity(fields={"username"}, message="Please, choose another username")
+ * @UniqueEntity(fields={"email"}, message="Please, choose another email", groups={"registration"})
+ * @UniqueEntity(fields={"username"}, message="Please, choose another username", groups={"registration"})
  */
 class User implements UserInterface
 {
@@ -36,13 +36,14 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=30, unique=true)
      *
-     * @Assert\NotBlank(message="You must choose a username")
+     * @Assert\NotBlank(message="You must choose a username", groups={"registration"})
      * @Assert\Length(
      *     min=3,
      *     max=30,
      *     minMessage="The username should contain at least {{ limit }} characters",
      *     maxMessage="The username should not contain more than {{ limit }} characters",
-     *     allowEmptyString=false
+     *     allowEmptyString=false,
+     *     groups={"registration"}
      * )
      */
     private $username;
@@ -52,13 +53,14 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=30)
      *
-     * @Assert\NotBlank(message="You must choose a lastname")
+     * @Assert\NotBlank(message="You must choose a lastname", groups={"registration", "profile"})
      * @Assert\Length(
      *     min=4,
      *     max=30,
      *     minMessage="The lastname should contain at least {{ limit }} characters",
      *     maxMessage="The lastname should not contain more than {{ limit }} characters",
-     *     allowEmptyString=false
+     *     allowEmptyString=false,
+     *     groups={"registration", "profile"}
      * )
      */
     private $lastname;
@@ -68,13 +70,14 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=30)
      *
-     * @Assert\NotBlank(message="You must choose a firstname")
+     * @Assert\NotBlank(message="You must choose a firstname", groups={"registration", "profile"})
      * @Assert\Length(
      *     min=3,
      *     max=30,
      *     minMessage="The firstname should contain at least {{ limit }} characters",
      *     maxMessage="The firstname should not contain more than {{ limit }} characters",
-     *     allowEmptyString=false
+     *     allowEmptyString=false,
+     *     groups={"registration", "profile"}
      * )
      */
     private $firstname;
@@ -84,9 +87,10 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=100, unique=true)
      *
-     * @Assert\NotBlank(message="You must enter an email")
+     * @Assert\NotBlank(message="You must enter an email", groups={"registration"})
      * @Assert\Email(
-     *     message="The email '{{ value }}' is not a valid email"
+     *     message="The email '{{ value }}' is not a valid email",
+     *     groups={"registration"}
      * )
      */
     private $email;
@@ -96,12 +100,13 @@ class User implements UserInterface
      *
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank(message="You must choose a Password")
+     * @Assert\NotBlank(message="You must choose a Password", groups={"registration"})
      * @Assert\Length(
      *     min=5,
      *     max=255,
      *     minMessage="The Password should contain at least {{ limit }} characters",
-     *     allowEmptyString=false
+     *     allowEmptyString=false,
+     *     groups={"registration", "profile"}
      * )
      */
     private $password;
@@ -212,11 +217,11 @@ class User implements UserInterface
     }
 
     /**
-     * @param string $password
+     * @param string|null $password
      *
      * @return $this
      */
-    public function setPassword(string $password): self
+    public function setPassword(?string $password): self
     {
         $this->password = $password;
 
