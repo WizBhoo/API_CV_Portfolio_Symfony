@@ -8,6 +8,7 @@ namespace App\Security;
 
 use App\Manager\ContactManager;
 use App\Manager\UserManager;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use SymfonyCasts\Bundle\ResetPassword\Exception\ResetPasswordExceptionInterface;
 use SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface;
@@ -57,6 +58,8 @@ class ResetPasswordRequester
      *
      * @param string $emailFormData
      *
+     * @return void
+     *
      * @throws TransportExceptionInterface
      */
     public function processPasswordRequest(string $emailFormData): void
@@ -74,7 +77,8 @@ class ResetPasswordRequester
                 $resetToken,
                 $this->resetPasswordHelper->getTokenLifetime()
             );
-        } catch (ResetPasswordExceptionInterface $e) {
+        } catch (ResetPasswordExceptionInterface $exception) {
+            error_log($exception->getMessage());
         }
     }
 }
