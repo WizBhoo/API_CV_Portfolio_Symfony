@@ -18,8 +18,8 @@ app_contact:
   controller: App\Controller\ContactController::contact
   methods: GET|POST
 
-app_user_profile:
-  path: /profile/{username}/edit
+app_user_profile_edit:
+  path: /profile/edit
   controller: App\Controller\UserController::edit
   methods: GET|POST
 

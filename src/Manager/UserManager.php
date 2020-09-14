@@ -11,6 +11,7 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Class UserManager.
@@ -76,14 +77,14 @@ class UserManager
     /**
      * Update User's profile in db.
      *
-     * @param User   $user
-     * @param string $password
+     * @param UserInterface   $user
+     * @param string          $password
      *
      * @return void
      *
      * @throws ORMException|OptimisticLockException
      */
-    public function updateProfile(User $user, string $password): void
+    public function updateProfile(UserInterface $user, string $password): void
     {
         if (!empty($user->getPassword())) {
             $password = $this->passwordEncoder->encodePassword(

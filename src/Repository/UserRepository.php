@@ -11,6 +11,7 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Class UserRepository.
@@ -50,13 +51,13 @@ class UserRepository extends ServiceEntityRepository
     /**
      * Persists User updated in db.
      *
-     * @param User $user
+     * @param UserInterface $user
      *
      * @return void
      *
      * @throws ORMException|OptimisticLockException
      */
-    public function update(User $user): void
+    public function update(UserInterface $user): void
     {
         $this->_em->persist($user);
         $this->_em->flush();

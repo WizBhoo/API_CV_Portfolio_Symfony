@@ -89,14 +89,14 @@ class UserController extends AbstractController
      * Update User profile information.
      *
      * @param Request $request
-     * @param User    $user
      *
      * @return Response
      *
      * @throws ORMException|OptimisticLockException
      */
-    public function edit(Request $request, User $user): Response
+    public function edit(Request $request): Response
     {
+        $user = $this->getUser();
         $oldPassword = $user->getPassword();
         $form = $this->createForm(ProfileType::class, $user);
         $form->handleRequest($request);
