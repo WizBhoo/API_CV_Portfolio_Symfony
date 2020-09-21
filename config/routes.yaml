@@ -13,6 +13,16 @@ app_project_show:
   controller: App\Controller\PortfolioController::show
   methods: GET
 
+app_blog_home:
+  path: /blog
+  controller: App\Controller\BlogController::blogHome
+  methods: GET
+
+app_blog_show:
+  path: /blog/{slug}
+  controller: App\Controller\BlogController::show
+  methods: GET
+
 app_contact:
   path: /contact
   controller: App\Controller\ContactController::contact
@@ -73,3 +83,8 @@ app_admin_user_switch:
 app_admin_user_delete:
   path: /api-admin/user/{id}/delete
   controller: App\Controller\UserController::delete
+
+app_admin_posts:
+  path: /api-admin/posts
+  controller: App\Controller\PostController::postsList
+  methods: GET

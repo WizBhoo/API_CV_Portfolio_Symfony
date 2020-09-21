@@ -6,6 +6,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -25,9 +27,9 @@ class User implements UserInterface
     /**
      * @var int
      *
-     * @ORM\Column(type="integer")
      * @ORM\Id()
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
      */
     private $id;
 
@@ -119,17 +121,32 @@ class User implements UserInterface
     private $roles = [];
 
     /**
-     * @return int|null
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity=Post::class, mappedBy="author", orphanRemoval=true)
      */
-    public function getId(): ?int
+    private $posts;
+
+    /**
+     * User constructor.
+     */
+    public function __construct()
+    {
+        $this->posts = new ArrayCollection();
+    }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
     {
         return $this->id;
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getLastname(): ?string
+    public function getLastname(): string
     {
         return $this->lastname;
     }
@@ -147,9 +164,9 @@ class User implements UserInterface
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getFirstname(): ?string
+    public function getFirstname(): string
     {
         return $this->firstname;
     }
@@ -169,9 +186,9 @@ class User implements UserInterface
     /**
      * The visual identifier that represents this user.
      *
-     * @see UserInterface|null
+     * @see UserInterface
      */
-    public function getUsername(): ?string
+    public function getUsername(): string
     {
         return $this->username;
     }
@@ -189,9 +206,9 @@ class User implements UserInterface
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getEmail(): ?string
+    public function getEmail(): string
     {
         return $this->email;
     }
@@ -211,17 +228,17 @@ class User implements UserInterface
     /**
      * @see UserInterface
      */
-    public function getPassword(): ?string
+    public function getPassword(): string
     {
         return $this->password;
     }
 
     /**
-     * @param string|null $password
+     * @param string $password
      *
      * @return $this
      */
-    public function setPassword(?string $password): self
+    public function setPassword(string $password): self
     {
         $this->password = $password;
 
@@ -261,5 +278,42 @@ class User implements UserInterface
      */
     public function eraseCredentials()
     {
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getPosts(): Collection
+    {
+        return $this->posts;
+    }
+
+    /**
+     * @param Post $post
+     *
+     * @return $this
+     */
+    public function addPost(Post $post): self
+    {
+        if (!$this->posts->contains($post)) {
+            $post->setAuthor($this);
+            $this->posts->add($post);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param Post $post
+     *
+     * @return $this
+     */
+    public function removePost(Post $post): self
+    {
+        if ($this->posts->contains($post)) {
+            $this->posts->removeElement($post);
+        }
+
+        return $this;
     }
 }
