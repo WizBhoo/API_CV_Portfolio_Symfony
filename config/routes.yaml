@@ -83,3 +83,8 @@ app_admin_user_switch:
 app_admin_user_delete:
   path: /api-admin/user/{id}/delete
   controller: App\Controller\UserController::delete
+
+app_admin_posts:
+  path: /api-admin/posts
+  controller: App\Controller\PostController::postsList
+  methods: GET

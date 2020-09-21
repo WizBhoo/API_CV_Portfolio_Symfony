@@ -1,0 +1,69 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="overview-wrap">
+                <h1 class="title-1 m-b-35 text-center">
+                    {% trans %}Posts Management{% endtrans %}
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-data__tool">
+                <div class="table-data__tool-right">
+                    <a href="">
+                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                            <i class="zmdi zmdi-plus"></i>{% trans %}Add Post{% endtrans %}
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!-- DATA TABLE -->
+            <div class="table-responsive table-responsive-data2">
+                <table class="table table-data2">
+                    <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>Modifié le</th>
+                        <th class="action">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for post in posts %}
+                        <tr class="tr-shadow">
+                            <td>{{ post.title }}</td>
+                            <td>{{ post.author.username }}</td>
+                            <td>{{ post.updatedAt|date("d/m/Y à H:i") }}</td>
+                            <td>
+                                <div class="table-data-feature">
+                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit Post">
+                                        <a href="">
+                                            <i class="zmdi zmdi-edit"></i>
+                                        </a>
+                                    </button>
+                                    <form action=""
+                                          method="POST"
+                                          onsubmit="return confirm('Are you sure you want to do that ?')">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="spacer"></tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- END DATA TABLE -->
+        </div>
+    </div>
+
+{% endblock %}
