@@ -136,17 +136,17 @@ class User implements UserInterface
     }
 
     /**
-     * @return int|null
+     * @return int
      */
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getLastname(): ?string
+    public function getLastname(): string
     {
         return $this->lastname;
     }
@@ -164,9 +164,9 @@ class User implements UserInterface
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getFirstname(): ?string
+    public function getFirstname(): string
     {
         return $this->firstname;
     }
@@ -186,9 +186,9 @@ class User implements UserInterface
     /**
      * The visual identifier that represents this user.
      *
-     * @see UserInterface|null
+     * @see UserInterface
      */
-    public function getUsername(): ?string
+    public function getUsername(): string
     {
         return $this->username;
     }
@@ -206,9 +206,9 @@ class User implements UserInterface
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getEmail(): ?string
+    public function getEmail(): string
     {
         return $this->email;
     }
@@ -228,17 +228,17 @@ class User implements UserInterface
     /**
      * @see UserInterface
      */
-    public function getPassword(): ?string
+    public function getPassword(): string
     {
         return $this->password;
     }
 
     /**
-     * @param string|null $password
+     * @param string $password
      *
      * @return $this
      */
-    public function setPassword(?string $password): self
+    public function setPassword(string $password): self
     {
         $this->password = $password;
 
@@ -296,8 +296,8 @@ class User implements UserInterface
     public function addPost(Post $post): self
     {
         if (!$this->posts->contains($post)) {
-            $this->posts[] = $post;
             $post->setAuthor($this);
+            $this->posts->add($post);
         }
 
         return $this;
@@ -312,10 +312,6 @@ class User implements UserInterface
     {
         if ($this->posts->contains($post)) {
             $this->posts->removeElement($post);
-            // set the owning side to null (unless already changed)
-            if ($post->getAuthor() === $this) {
-                $post->setAuthor(null);
-            }
         }
 
         return $this;

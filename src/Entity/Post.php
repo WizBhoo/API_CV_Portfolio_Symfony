@@ -83,27 +83,27 @@ class Post
     private $imagePath;
 
     /**
-     * @return int|null
+     * @return int
      */
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
 
     /**
-     * @return User|null
+     * @return User
      */
-    public function getAuthor(): ?User
+    public function getAuthor(): User
     {
         return $this->author;
     }
 
     /**
-     * @param User|null $author
+     * @param User $author
      *
      * @return $this
      */
-    public function setAuthor(?User $author): self
+    public function setAuthor(User $author): self
     {
         $this->author = $author;
 
@@ -111,9 +111,9 @@ class Post
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getSlug(): ?string
+    public function getSlug(): string
     {
         return $this->slug;
     }
@@ -131,9 +131,9 @@ class Post
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getTitle(): ?string
+    public function getTitle(): string
     {
         return $this->title;
     }
@@ -151,9 +151,9 @@ class Post
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getExtract(): ?string
+    public function getExtract(): string
     {
         return $this->extract;
     }
@@ -171,9 +171,9 @@ class Post
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getContent(): ?string
+    public function getContent(): string
     {
         return $this->content;
     }
@@ -191,9 +191,9 @@ class Post
     }
 
     /**
-     * @return DateTimeInterface|null
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -211,9 +211,9 @@ class Post
     }
 
     /**
-     * @return DateTimeInterface|null
+     * @return DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): DateTimeInterface
     {
         return $this->updatedAt;
     }
@@ -231,19 +231,19 @@ class Post
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getImagePath(): ?string
+    public function getImagePath(): string
     {
         return $this->imagePath;
     }
 
     /**
-     * @param string|null $imagePath
+     * @param string $imagePath
      *
      * @return $this
      */
-    public function setImagePath(?string $imagePath): self
+    public function setImagePath(string $imagePath): self
     {
         $this->imagePath = $imagePath;
 
