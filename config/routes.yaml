@@ -88,3 +88,7 @@ app_admin_posts:
   path: /api-admin/posts
   controller: App\Controller\PostController::postsList
   methods: GET
+
+easy_dashboard:
+  path: /admin
+  controller: App\Controller\Admin\DashboardController::index
