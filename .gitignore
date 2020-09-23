@@ -1,4 +1,5 @@
 .DS_Store
+.idea/
 .phpcs-cache
 ###> symfony/framework-bundle ###
 /.env.local
